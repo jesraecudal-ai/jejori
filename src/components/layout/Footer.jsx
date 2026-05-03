@@ -9,7 +9,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <h3 className="font-serif text-3xl font-bold text-gold mb-4">JEJORI</h3>
+            <img
+              src="https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/28f4dca2e_JEJORILOGO1.png"
+              alt="Jejori Dimsum Haus"
+              className="h-20 w-20 object-contain invert mb-4"
+            />
             <p className="text-[#F2F2F2]/50 font-sans text-sm leading-relaxed">
               Onde a noite encontra o sabor. Uma experiência gastronômica asiática autêntica feita para a alma.
             </p>

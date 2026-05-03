@@ -36,10 +36,12 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <span className="font-serif text-2xl md:text-3xl font-bold text-gold tracking-wider">
-            JEJORI
-          </span>
+        <Link to="/" className="flex items-center">
+          <img
+            src="https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/28f4dca2e_JEJORILOGO1.png"
+            alt="Jejori Dimsum Haus"
+            className="h-12 w-12 object-contain invert"
+          />
         </Link>
 
         {/* Desktop Nav */}
