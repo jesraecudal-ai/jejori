@@ -14,7 +14,7 @@ const locations = [
     name: "Cidade Baixa — Porto Alegre",
     address: "R. Luís Afonso, 26 — Cidade Baixa, Porto Alegre, RS",
     hours: ["Seg–Sáb: 19h–23h (jantar)"],
-    badge: "New Bigger Space Coming 2026",
+    badge: "Novo Espaço Maior em 2026",
   },
 ];
 
@@ -23,7 +23,7 @@ export default function LocationsSection() {
     <section className="py-24 px-6 bg-[#0B0B0B] relative">
       <div className="absolute inset-0 bg-gradient-to-b from-walnut/20 to-transparent opacity-30" />
       <div className="max-w-5xl mx-auto relative z-10">
-        <SectionHeader title="Find Us" subtitle="Two locations, one unforgettable experience" />
+        <SectionHeader title="Onde Estamos" subtitle="Dois endereços, uma experiência inesquecível" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {locations.map((loc, i) => (
@@ -56,7 +56,7 @@ export default function LocationsSection() {
                 </span>
               )}
               <button className="text-gold text-sm font-sans font-semibold flex items-center gap-2 hover:gap-3 transition-all duration-300 group">
-                Get Directions <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                Como Chegar <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </button>
             </motion.div>
           ))}

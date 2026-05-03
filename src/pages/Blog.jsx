@@ -20,10 +20,10 @@ export default function Blog() {
           animate={{ opacity: 1, y: 0 }}
           className="font-serif text-5xl md:text-7xl font-bold text-gold mb-4"
         >
-          Journal
+          Diário
         </motion.h1>
         <p className="text-[#F2F2F2]/50 font-sans text-lg max-w-lg mx-auto">
-          Stories from the kitchen, the bar, and the night
+          Histórias da cozinha, do bar e da noite
         </p>
         <div className="flex items-center justify-center gap-4 mt-6">
           <div className="h-px w-16 bg-ember" />
@@ -39,7 +39,7 @@ export default function Blog() {
           </div>
         ) : posts.length === 0 ? (
           <div className="text-center py-20">
-            <p className="text-[#F2F2F2]/40 font-sans text-lg">Coming soon — stories are brewing</p>
+            <p className="text-[#F2F2F2]/40 font-sans text-lg">Em breve — as histórias estão fermentando</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -75,7 +75,7 @@ export default function Blog() {
                       {post.excerpt || post.content?.substring(0, 120) + "..."}
                     </p>
                     <span className="text-gold text-sm font-sans font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-                      Read More <ArrowRight size={14} />
+                      Ler Mais <ArrowRight size={14} />
                     </span>
                   </div>
                 </Link>

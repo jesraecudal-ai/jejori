@@ -30,10 +30,10 @@ export default function PageNotFound({}) {
                     
                     <div className="space-y-3">
                         <h2 className="text-2xl font-medium text-[#F2F2F2]" style={{fontFamily: "'Cormorant Garamond', serif"}}>
-                            Lost in the Night
+                            Perdido na Noite
                         </h2>
                         <p className="text-[#F2F2F2]/50 leading-relaxed text-sm">
-                            This page seems to have slipped into the shadows.
+                            Esta página parece ter se perdido nas sombras.
                         </p>
                     </div>
                     
@@ -50,7 +50,7 @@ export default function PageNotFound({}) {
                             onClick={() => window.location.href = '/'} 
                             className="inline-flex items-center px-6 py-2.5 text-sm font-semibold tracking-widest uppercase text-[#0B0B0B] bg-[#D4AF37] rounded-sm hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all duration-300"
                         >
-                            Return Home
+                            Voltar ao Início
                         </button>
                     </div>
                 </div>

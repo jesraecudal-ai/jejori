@@ -4,12 +4,12 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "Home", path: "/" },
+  { label: "Início", path: "/" },
   { label: "Menu", path: "/menu" },
-  { label: "Announcements", path: "/announcements" },
+  { label: "Novidades", path: "/announcements" },
   { label: "Blog", path: "/blog" },
-  { label: "About", path: "/about" },
-  { label: "Franchise", path: "/franchise" },
+  { label: "Sobre", path: "/about" },
+  { label: "Franquia", path: "/franchise" },
 ];
 
 export default function Navbar() {
@@ -61,7 +61,7 @@ export default function Navbar() {
             to="/reserve"
             className="bg-gold text-[#0B0B0B] px-6 py-2.5 text-sm font-sans font-semibold tracking-widest uppercase rounded-sm hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all duration-300"
           >
-            Reserve
+            Contato
           </Link>
         </div>
 
@@ -101,7 +101,7 @@ export default function Navbar() {
                 to="/reserve"
                 className="bg-gold text-[#0B0B0B] px-6 py-3 text-center font-sans font-semibold tracking-widest uppercase rounded-sm mt-2"
               >
-                Reserve a Table
+                Contato
               </Link>
             </div>
           </motion.div>

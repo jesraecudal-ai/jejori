@@ -7,24 +7,24 @@ const HERO_IMAGE = "https://media.base44.com/images/public/69f7a7217f4aea931ae30
 const INTERIOR_IMAGE = "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/5c65208d5_generated_e66787bc.png";
 
 const journey = [
-  { place: "Singapore", desc: "Jesrae experiences authentic Asian food culture through traditional markets and local kitchens, deepening his personal connection to Asian heritage." },
-  { place: "Hong Kong", desc: "Marjorie trains and works for 7 years in one of the world's greatest centers for Chinese cuisine, mastering dim sum and professional kitchen discipline." },
-  { place: "Uruguay", desc: "Jesrae's global career continues, carrying the flavors and systems mindset that would later shape Jejori." },
-  { place: "Gravataí, Brazil", desc: "Both paths converge. In 2025, Jejori Dimsum Haus opens at R. Cônego Pedro Wagner, 782 — Centro, Gravataí." },
-  { place: "Porto Alegre, 2026", desc: "Cidade Baixa (R. Luís Afonso, 26) re-launches in a new, bigger restaurant — bringing Jejori's authentic Asian experience to a wider Porto Alegre audience." },
+  { place: "Singapura", desc: "Jesrae vivencia a cultura gastronômica asiática autêntica através de mercados tradicionais e cozinhas locais, aprofundando sua conexão pessoal com a herança asiática." },
+  { place: "Hong Kong", desc: "Marjorie treina e trabalha por 7 anos em um dos maiores centros de culinária chinesa do mundo, dominando o dim sum e a disciplina de cozinha profissional." },
+  { place: "Uruguai", desc: "A carreira global de Jesrae continua, carregando os sabores e a mentalidade sistêmica que mais tarde moldariam o Jejori." },
+  { place: "Gravataí, Brasil", desc: "Os dois caminhos convergem. Em 2025, o Jejori Dimsum Haus abre na R. Cônego Pedro Wagner, 782 — Centro, Gravataí." },
+  { place: "Porto Alegre, 2026", desc: "A unidade Cidade Baixa (R. Luís Afonso, 26) é relançada em um novo espaço maior — levando a experiência asiática autêntica do Jejori a um público ainda maior em Porto Alegre." },
 ];
 
 const menuHighlights = [
-  { emoji: "🥟", label: "Dim Sum", desc: "Crafted with traditional techniques learned in Hong Kong" },
-  { emoji: "🍜", label: "Noodles & Broths", desc: "Rich in depth and flavor, slow-built with care" },
-  { emoji: "🍛", label: "Rice Dishes", desc: "Designed for comfort, balance, and authenticity" },
-  { emoji: "🥢", label: "Classic Preparations", desc: "Rooted in real experience and cultural heritage" },
+  { emoji: "🥟", label: "Dim Sum", desc: "Elaborado com técnicas tradicionais aprendidas em Hong Kong" },
+  { emoji: "🍜", label: "Macarrão & Caldos", desc: "Profundos em sabor, preparados lentamente com cuidado" },
+  { emoji: "🍛", label: "Pratos de Arroz", desc: "Pensados para conforto, equilíbrio e autenticidade" },
+  { emoji: "🥢", label: "Preparações Clássicas", desc: "Enraizadas em experiência real e herança cultural" },
 ];
 
 const pillars = [
-  { label: "Mission", text: "To bring authentic Asian cuisine to the Brazilian community, preserving the traditions and techniques that define it." },
-  { label: "Vision", text: "To grow Jejori into a recognizable brand known for authenticity, consistency, strong operational systems, and cultural experience." },
-  { label: "Commitment", text: "Every dish carries a story of culture, experience, and intention — backed by real journeys and culinary mastery." },
+  { label: "Missão", text: "Trazer a culinária asiática autêntica à comunidade brasileira, preservando as tradições e técnicas que a definem." },
+  { label: "Visão", text: "Crescer o Jejori como uma marca reconhecida pela autenticidade, consistência, sistemas operacionais sólidos e experiência cultural." },
+  { label: "Compromisso", text: "Cada prato carrega uma história de cultura, experiência e intenção — respaldada por jornadas reais e maestria culinária." },
 ];
 
 export default function About() {
@@ -47,7 +47,7 @@ export default function About() {
               Jejori <span className="text-gold">Dimsum Haus</span>
             </h1>
             <p className="text-[#F2F2F2]/50 font-sans text-base mt-4 max-w-xl mx-auto">
-              Born from international journeys, cultural heritage, and a shared passion for authentic Asian cuisine.
+              Nascido de jornadas internacionais, herança cultural e uma paixão compartilhada pela culinária asiática autêntica.
             </p>
           </motion.div>
         </div>
@@ -64,18 +64,18 @@ export default function About() {
         >
           <div className="flex items-center gap-4 mb-8">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-gold whitespace-nowrap">
-              🌏 From Asia to Brazil
+              🌏 Da Ásia ao Brasil
             </h2>
             <div className="flex-1 h-px bg-ember/30" />
           </div>
           <p className="text-[#F2F2F2]/65 font-sans text-base md:text-lg leading-[1.9] mb-8">
-            Jejori's story begins across continents. Co-founder <span className="text-gold font-semibold">Jesrae</span> built his career as a Senior Business Analyst specializing in accounting, banking, finance, and logistics — working with international organizations across the world. His professional background instilled a strong foundation in systems, consistency, and operational excellence, principles that now shape how Jejori is built and managed.
+            A história do Jejori começa em diferentes continentes. O cofundador <span className="text-gold font-semibold">Jesrae</span> construiu sua carreira como Analista de Negócios Sênior especializado em contabilidade, bancário, finanças e logística — atuando em organizações internacionais ao redor do mundo. Sua formação profissional estabeleceu uma sólida base em sistemas, consistência e excelência operacional, princípios que hoje moldam a gestão do Jejori.
           </p>
           <p className="text-[#F2F2F2]/65 font-sans text-base md:text-lg leading-[1.9] mb-8">
-            As a Filipino with Japanese descent, his connection to Asian culture is not only professional — but deeply personal. During his time in Singapore, he experienced authentic Asian food culture at its core, through traditional markets, local kitchens, and everyday street dining.
+            Filipino com descendência japonesa, sua conexão com a cultura asiática vai muito além do profissional — é profundamente pessoal. Durante seu tempo em Singapura, ele vivenciou a cultura gastronômica asiática em sua essência, através de mercados tradicionais, cozinhas locais e o cotidiano da gastronomia de rua.
           </p>
           <p className="text-[#F2F2F2]/65 font-sans text-base md:text-lg leading-[1.9]">
-            At the same time, co-founder <span className="text-gold font-semibold">Marjorie</span> was building her culinary foundation in Asia. She spent <span className="text-gold font-semibold">7 years working in Hong Kong</span> — one of the world's most respected centers for Chinese cuisine — mastering traditional cooking techniques, professional kitchen precision, and the art of preparing dim sum, a cornerstone of Chinese gastronomy. After Hong Kong, Marjorie continued her journey in Brazil, where she has now lived for over a decade, carrying with her more than <span className="text-gold font-semibold">25 years of culinary experience</span>.
+            Ao mesmo tempo, a cofundadora <span className="text-gold font-semibold">Marjorie</span> construía sua base culinária na Ásia. Ela passou <span className="text-gold font-semibold">7 anos trabalhando em Hong Kong</span> — um dos centros de culinária chinesa mais respeitados do mundo — dominando técnicas tradicionais de cozinha, precisão em cozinha profissional e a arte de preparar dim sum, um pilar da gastronomia chinesa. Após Hong Kong, Marjorie continuou sua jornada no Brasil, onde vive há mais de uma década, trazendo consigo mais de <span className="text-gold font-semibold">25 anos de experiência culinária</span>.
           </p>
         </motion.div>
 
@@ -129,21 +129,21 @@ export default function About() {
           </div>
           <div className="border border-[#D4AF37]/15 rounded-lg p-8 bg-walnut/10">
             <p className="text-[#F2F2F2]/65 font-sans text-base leading-[1.9] mb-6">
-              In 2025, Jesrae and Marjorie met — and quickly recognized a shared vision: to bring authentic Asian flavors to Brazil in a way that is <span className="text-gold italic">accessible, consistent, and rooted in tradition</span>.
+              Em 2025, Jesrae e Marjorie se conheceram — e rapidamente reconheceram uma visão compartilhada: trazer os sabores asiáticos autênticos ao Brasil de forma <span className="text-gold italic">acessível, consistente e enraizada na tradição</span>.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex items-start gap-3 p-4 border border-[#D4AF37]/10 rounded-lg">
                 <div className="w-2 h-2 rotate-45 bg-gold shrink-0 mt-2" />
                 <div>
                   <p className="text-gold font-sans text-sm font-semibold mb-1">Jesrae</p>
-                  <p className="text-[#F2F2F2]/55 font-sans text-sm leading-relaxed">Structured, systems-driven business expertise in finance, logistics, and operations</p>
+                  <p className="text-[#F2F2F2]/55 font-sans text-sm leading-relaxed">Expertise de negócios estruturada em finanças, logística e operações</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 border border-[#D4AF37]/10 rounded-lg">
                 <div className="w-2 h-2 rotate-45 bg-gold shrink-0 mt-2" />
                 <div>
                   <p className="text-gold font-sans text-sm font-semibold mb-1">Marjorie</p>
-                  <p className="text-[#F2F2F2]/55 font-sans text-sm leading-relaxed">Deep, hands-on culinary mastery shaped by 7 years in Hong Kong's finest kitchens</p>
+                  <p className="text-[#F2F2F2]/55 font-sans text-sm leading-relaxed">Domínio culinário profundo, moldado por 7 anos nas melhores cozinhas de Hong Kong</p>
                 </div>
               </div>
             </div>
@@ -163,7 +163,7 @@ export default function About() {
             <div className="flex-1 h-px bg-ember/30" />
           </div>
           <p className="text-[#F2F2F2]/65 font-sans text-base md:text-lg leading-[1.9] mb-8">
-            Jejori was built with a clear purpose: to offer not just food, but an experience centered on <span className="text-gold">culture, tradition, and connection</span>. Inspired by Asian dining traditions, we embrace shared meals, communal dining, and the idea that food brings people together.
+            O Jejori foi construído com um propósito claro: oferecer não apenas comida, mas uma experiência centrada em <span className="text-gold">cultura, tradição e conexão</span>. Inspirados nas tradições gastronômicas asiáticas, valorizamos as refeições compartilhadas, a mesa coletiva e a ideia de que a comida une as pessoas.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {menuHighlights.map((item, i) => (
@@ -231,12 +231,12 @@ export default function About() {
 
       {/* CTA */}
       <div className="py-20 px-6 text-center bg-gradient-to-t from-walnut/10 to-transparent">
-        <p className="text-[#F2F2F2]/40 font-sans text-sm tracking-widest uppercase mb-3">We invite you to experience it with us</p>
+        <p className="text-[#F2F2F2]/40 font-sans text-sm tracking-widest uppercase mb-3">Convidamos você a vivenciar conosco</p>
         <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#F2F2F2] mb-8">
-          Come <span className="text-gold">Taste the Story</span>
+          Venha <span className="text-gold">Provar a História</span>
         </h2>
-        <GoldButton to="/reserve" className="animate-pulse-glow">
-          Reserve a Table
+        <GoldButton to="/menu" className="animate-pulse-glow">
+          Ver Cardápio
         </GoldButton>
       </div>
     </div>

@@ -9,10 +9,10 @@ import GoldButton from "../components/shared/GoldButton";
 import { Loader2 } from "lucide-react";
 
 const categoryLabels = {
-  starters: "Starters",
-  main_dishes: "Main Dishes",
-  drinks: "Drinks",
-  desserts: "Desserts",
+  starters: "Entradas",
+  main_dishes: "Pratos Principais",
+  drinks: "Bebidas",
+  desserts: "Sobremesas",
 };
 
 export default function Menu() {
@@ -54,10 +54,10 @@ export default function Menu() {
           animate={{ opacity: 1, y: 0 }}
           className="font-serif text-5xl md:text-7xl font-bold text-gold mb-4"
         >
-          The Menu
+          Cardápio
         </motion.h1>
         <p className="text-[#F2F2F2]/50 font-sans text-lg max-w-lg mx-auto">
-          Every dish tells a story of smoke, spice, and soul
+          Cada prato conta uma história de fumaça, tempero e alma
         </p>
         <div className="flex items-center justify-center gap-4 mt-6">
           <div className="h-px w-16 bg-ember" />
@@ -77,7 +77,7 @@ export default function Menu() {
       {/* View Toggle + Count */}
       <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
         <span className="text-[#F2F2F2]/30 text-sm font-sans">
-          {filtered.length} item{filtered.length !== 1 ? "s" : ""}
+          {filtered.length} {filtered.length !== 1 ? "itens" : "item"}
         </span>
         <ViewToggle view={view} setView={setView} />
       </div>
@@ -90,7 +90,7 @@ export default function Menu() {
           </div>
         ) : filtered.length === 0 ? (
           <div className="text-center py-20">
-            <p className="text-[#F2F2F2]/40 font-sans text-lg">No items found</p>
+            <p className="text-[#F2F2F2]/40 font-sans text-lg">Nenhum item encontrado</p>
           </div>
         ) : (
           <>
@@ -98,7 +98,7 @@ export default function Menu() {
             {activeCategory === "all" && !activeFilter && chefsPicks.length > 0 && (
               <div className="mb-16">
                 <div className="flex items-center gap-4 mb-8">
-                  <h3 className="font-serif text-2xl font-bold text-gold">Chef's Picks</h3>
+                  <h3 className="font-serif text-2xl font-bold text-gold">Escolhas do Chef</h3>
                   <div className="flex-1 h-px bg-ember/30" />
                 </div>
                 <div className={view === "visual" ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" : ""}>
@@ -132,13 +132,13 @@ export default function Menu() {
       {/* Bottom CTA */}
       <div className="py-20 px-6 text-center bg-gradient-to-t from-walnut/10 to-transparent">
         <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#F2F2F2] mb-3">
-          Craving something?
+          Com vontade de algo?
         </h2>
         <p className="text-[#F2F2F2]/50 font-sans mb-8">
-          Come taste it tonight — no screen can capture the aroma
+          Venha provar pessoalmente — nenhuma tela captura o aroma
         </p>
-        <GoldButton to="/reserve" className="animate-pulse-glow">
-          Visit Us Tonight
+        <GoldButton to="/about" className="animate-pulse-glow">
+          Visite-nos Hoje
         </GoldButton>
       </div>
     </div>

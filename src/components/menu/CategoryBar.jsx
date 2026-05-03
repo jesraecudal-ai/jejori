@@ -1,18 +1,18 @@
 import React from "react";
 
 const categories = [
-  { key: "all", label: "All" },
-  { key: "starters", label: "Starters" },
-  { key: "main_dishes", label: "Main Dishes" },
-  { key: "drinks", label: "Drinks" },
-  { key: "desserts", label: "Desserts" },
+  { key: "all", label: "Todos" },
+  { key: "starters", label: "Entradas" },
+  { key: "main_dishes", label: "Pratos Principais" },
+  { key: "drinks", label: "Bebidas" },
+  { key: "desserts", label: "Sobremesas" },
 ];
 
 const filters = [
   { key: "popular", label: "Popular" },
-  { key: "spicy", label: "Spicy" },
-  { key: "new", label: "New" },
-  { key: "chefs_pick", label: "Chef's Picks" },
+  { key: "spicy", label: "Apimentado" },
+  { key: "new", label: "Novo" },
+  { key: "chefs_pick", label: "Escolha do Chef" },
 ];
 
 export default function CategoryBar({ activeCategory, setActiveCategory, activeFilter, setActiveFilter }) {

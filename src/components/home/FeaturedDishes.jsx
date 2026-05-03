@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import SectionHeader from "../shared/SectionHeader";
 
 const dishes = [
-  { name: "Tonkotsu Ramen", desc: "Rich pork bone broth, chashu, soft egg", tag: "Signature" },
-  { name: "Korean Wings", desc: "Gochujang-glazed, sesame, scallions", tag: "Popular" },
-  { name: "Smoke & Ember", desc: "House signature cocktail, charred citrus", tag: "Drink" },
-  { name: "Gyoza Platter", desc: "Pan-seared, truffle ponzu dipping sauce", tag: "Chef's Pick" },
+  { name: "Tonkotsu Ramen", desc: "Caldo rico de osso de porco, chashu, ovo mole", tag: "Assinatura" },
+  { name: "Korean Wings", desc: "Frango ao molho gochujang, gergelim e cebolinha", tag: "Popular" },
+  { name: "Smoke & Ember", desc: "Drinque assinatura da casa, cítrico defumado", tag: "Drink" },
+  { name: "Gyoza Platter", desc: "Gyoza grelhado, molho ponzu com trufa", tag: "Chef's Pick" },
 ];
 
 export default function FeaturedDishes({ images }) {
@@ -14,8 +14,8 @@ export default function FeaturedDishes({ images }) {
     <section className="py-24 px-6 bg-[#0B0B0B]">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
-          title="Featured"
-          subtitle="Our most celebrated dishes, crafted with fire and intention"
+          title="Destaques"
+          subtitle="Nossos pratos mais celebrados, preparados com fogo e intenção"
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

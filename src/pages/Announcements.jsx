@@ -11,9 +11,9 @@ const categoryIcons = {
 };
 
 const categoryLabels = {
-  events: "Events",
-  hours: "Opening Hours",
-  promotions: "Promotions",
+  events: "Eventos",
+  hours: "Horários",
+  promotions: "Promoções",
 };
 
 export default function Announcements() {
@@ -35,10 +35,10 @@ export default function Announcements() {
           animate={{ opacity: 1, y: 0 }}
           className="font-serif text-5xl md:text-7xl font-bold text-gold mb-4"
         >
-          Announcements
+          Novidades
         </motion.h1>
         <p className="text-[#F2F2F2]/50 font-sans text-lg">
-          Stay updated on what's happening at Jejori
+          Fique por dentro do que está acontecendo no Jejori
         </p>
         <div className="flex items-center justify-center gap-4 mt-6">
           <div className="h-px w-16 bg-ember" />
@@ -60,7 +60,7 @@ export default function Announcements() {
                   : "text-[#F2F2F2]/50 border border-[#D4AF37]/15 hover:border-gold/40 hover:text-gold"
               }`}
             >
-              {cat === "all" ? "All" : categoryLabels[cat]}
+              {cat === "all" ? "Todos" : categoryLabels[cat]}
             </button>
           ))}
         </div>
@@ -74,7 +74,7 @@ export default function Announcements() {
           </div>
         ) : filtered.length === 0 ? (
           <div className="text-center py-20">
-            <p className="text-[#F2F2F2]/40 font-sans text-lg">No announcements right now</p>
+            <p className="text-[#F2F2F2]/40 font-sans text-lg">Nenhuma novidade no momento</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -113,7 +113,7 @@ export default function Announcements() {
                     </p>
                     {item.valid_until && (
                       <p className="text-ember text-xs font-sans mt-4">
-                        Valid until {new Date(item.valid_until).toLocaleDateString()}
+                        Válido até {new Date(item.valid_until).toLocaleDateString("pt-BR")}
                       </p>
                     )}
                   </div>

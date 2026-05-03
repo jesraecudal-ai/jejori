@@ -25,7 +25,7 @@ export default function HeroSection({ heroImage }) {
           className="mb-6"
         >
           <span className="text-gold font-sans text-sm tracking-[0.4em] uppercase">
-            Authentic Asian Dining
+            Gastronomia Asiática Autêntica
           </span>
         </motion.div>
 
@@ -35,9 +35,9 @@ export default function HeroSection({ heroImage }) {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-[#F2F2F2] mb-6 leading-[0.95]"
         >
-          Where Night
+          Onde a Noite
           <br />
-          <span className="text-gold">Meets Flavor</span>
+          <span className="text-gold">Encontra o Sabor</span>
         </motion.h1>
 
         <motion.p
@@ -46,8 +46,8 @@ export default function HeroSection({ heroImage }) {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="text-[#F2F2F2]/60 font-sans text-base md:text-lg max-w-lg mb-10"
         >
-          An intimate journey through smoke, spice, and flame. 
-          Two locations. One unforgettable night.
+          Uma jornada íntima pelo defumado, pelo picante e pela chama.
+          Dois endereços. Uma noite inesquecível.
         </motion.p>
 
         <motion.div
@@ -57,7 +57,7 @@ export default function HeroSection({ heroImage }) {
           className="flex flex-col sm:flex-row gap-4"
         >
           <GoldButton to="/menu" variant="ghost">
-            View Menu
+            Ver Cardápio
           </GoldButton>
         </motion.div>
       </div>

@@ -8,13 +8,13 @@ export default function AnnouncementStrip() {
       <div className="max-w-7xl mx-auto flex items-center justify-center gap-3 flex-wrap">
         <Flame size={18} className="text-gold animate-pulse" />
         <span className="text-[#F2F2F2] font-sans text-sm font-semibold tracking-wide">
-          🔥 Open Tonight — Live DJ + New Seasonal Menu
+          🔥 Aberto Hoje — DJ ao Vivo + Novo Menu Sazonal
         </span>
         <Link
           to="/announcements"
           className="text-gold text-sm font-sans font-semibold flex items-center gap-1 hover:underline"
         >
-          See All <ArrowRight size={14} />
+          Ver Tudo <ArrowRight size={14} />
         </Link>
       </div>
     </div>

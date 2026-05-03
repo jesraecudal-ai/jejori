@@ -4,16 +4,16 @@ import { Star } from "lucide-react";
 import SectionHeader from "../shared/SectionHeader";
 
 const reviews = [
-  { name: "Marina S.", text: "Best Asian fusion in Porto Alegre. The ambiance is unreal — felt like Tokyo at night.", rating: 5 },
-  { name: "Carlos P.", text: "The ramen alone is worth the trip. Absolutely incredible broth. We'll be back every week.", rating: 5 },
-  { name: "Ana L.", text: "Perfect date night spot. Dark, cozy, and the cocktails are on another level.", rating: 5 },
+  { name: "Marina S.", text: "A melhor gastronomia asiática de Porto Alegre. O ambiente é incrível — parece Tóquio à noite.", rating: 5 },
+  { name: "Carlos P.", text: "Só pelo ramen já vale a visita. Um caldo absolutamente incrível. Voltaremos toda semana.", rating: 5 },
+  { name: "Ana L.", text: "Perfeito para um jantar a dois. Escuro, aconchegante, e os drinques são de outro nível.", rating: 5 },
 ];
 
 export default function ReviewsSection() {
   return (
     <section className="py-24 px-6 bg-[#0B0B0B]">
       <div className="max-w-6xl mx-auto">
-        <SectionHeader title="Voices" subtitle="What our guests are saying" />
+        <SectionHeader title="Vozes" subtitle="O que nossos clientes estão dizendo" />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reviews.map((review, i) => (

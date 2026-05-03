@@ -10,9 +10,9 @@ const tagColors = {
 
 const tagLabels = {
   popular: "Popular",
-  spicy: "Spicy",
-  new: "New",
-  chefs_pick: "Chef's Pick",
+  spicy: "Apimentado",
+  new: "Novo",
+  chefs_pick: "Escolha do Chef",
 };
 
 export default function MenuCard({ item, index, view = "visual" }) {
@@ -36,7 +36,7 @@ export default function MenuCard({ item, index, view = "visual" }) {
               </span>
             ))}
           </div>
-          <p className="text-[#F2F2F2]/40 text-sm font-sans">{item.description || "A signature Jejori creation"}</p>
+          <p className="text-[#F2F2F2]/40 text-sm font-sans">{item.description || "Uma criação assinatura do Jejori"}</p>
         </div>
         <span className="font-sans font-bold text-gold text-lg ml-4">
           R$ {item.price?.toFixed(2) || "—"}
@@ -86,7 +86,7 @@ export default function MenuCard({ item, index, view = "visual" }) {
         <h3 className="font-serif text-xl font-bold text-[#F2F2F2] mb-1 group-hover:text-gold transition-colors duration-300">
           {item.name}
         </h3>
-        <p className="text-[#F2F2F2]/40 text-sm font-sans mb-2">{item.description || "A signature Jejori creation"}</p>
+        <p className="text-[#F2F2F2]/40 text-sm font-sans mb-2">{item.description || "Uma criação assinatura do Jejori"}</p>
         <span className="font-sans font-bold text-gold text-lg">
           R$ {item.price?.toFixed(2) || "—"}
         </span>
