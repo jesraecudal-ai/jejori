@@ -18,14 +18,23 @@ export default function Footer() {
           {/* Locations */}
           <div>
             <h4 className="font-serif text-lg text-gold mb-4">Locations</h4>
-            <div className="space-y-3">
+            <div className="space-y-4">
               <div className="flex items-start gap-2">
                 <MapPin size={16} className="text-gold mt-1 shrink-0" />
-                <p className="text-[#F2F2F2]/60 text-sm font-sans">Centro, Gravataí</p>
+                <div>
+                  <p className="text-[#F2F2F2]/80 text-sm font-sans font-medium">Centro — Gravataí</p>
+                  <p className="text-[#F2F2F2]/45 text-xs font-sans">R. Cônego Pedro Wagner, 782</p>
+                </div>
               </div>
               <div className="flex items-start gap-2">
                 <MapPin size={16} className="text-gold mt-1 shrink-0" />
-                <p className="text-[#F2F2F2]/60 text-sm font-sans">Cidade Baixa, Porto Alegre</p>
+                <div>
+                  <p className="text-[#F2F2F2]/80 text-sm font-sans font-medium">Cidade Baixa — Porto Alegre</p>
+                  <p className="text-[#F2F2F2]/45 text-xs font-sans">R. Luís Afonso, 26</p>
+                  <span className="inline-block mt-1 bg-gold/20 text-gold text-[9px] font-sans font-bold tracking-widest uppercase px-2 py-0.5 rounded-sm">
+                    Re-launching 2026 ✦
+                  </span>
+                </div>
               </div>
             </div>
           </div>

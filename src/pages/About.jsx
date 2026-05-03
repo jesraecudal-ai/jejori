@@ -10,7 +10,8 @@ const journey = [
   { place: "Singapore", desc: "Jesrae experiences authentic Asian food culture through traditional markets and local kitchens, deepening his personal connection to Asian heritage." },
   { place: "Hong Kong", desc: "Marjorie trains and works for 7 years in one of the world's greatest centers for Chinese cuisine, mastering dim sum and professional kitchen discipline." },
   { place: "Uruguay", desc: "Jesrae's global career continues, carrying the flavors and systems mindset that would later shape Jejori." },
-  { place: "Brazil", desc: "Both paths converge. In 2025, Jesrae and Marjorie unite their visions — and Jejori is born." },
+  { place: "Gravataí, Brazil", desc: "Both paths converge. In 2025, Jejori Dimsum Haus opens at R. Cônego Pedro Wagner, 782 — Centro, Gravataí." },
+  { place: "Porto Alegre, 2026", desc: "Cidade Baixa (R. Luís Afonso, 26) re-launches in a new, bigger restaurant — bringing Jejori's authentic Asian experience to a wider Porto Alegre audience." },
 ];
 
 const menuHighlights = [

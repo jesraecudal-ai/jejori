@@ -5,14 +5,16 @@ import SectionHeader from "../shared/SectionHeader";
 
 const locations = [
   {
-    name: "Centro Gravataí",
-    address: "Rua Principal, 123 — Gravataí, RS",
+    name: "Centro — Gravataí",
+    address: "R. Cônego Pedro Wagner, 782 — Centro, Gravataí, RS",
     hours: "Tue–Sun: 6PM – 12AM",
+    badge: null,
   },
   {
-    name: "Cidade Baixa",
-    address: "Rua da República, 456 — Porto Alegre, RS",
-    hours: "Tue–Sun: 7PM – 1AM",
+    name: "Cidade Baixa — Porto Alegre",
+    address: "R. Luís Afonso, 26 — Cidade Baixa, Porto Alegre, RS",
+    hours: "Re-launching 2026",
+    badge: "New Bigger Space Coming 2026",
   },
 ];
 
@@ -44,6 +46,11 @@ export default function LocationsSection() {
                   {loc.hours}
                 </div>
               </div>
+              {loc.badge && (
+                <span className="inline-block mb-4 bg-gold/15 border border-gold/30 text-gold text-[10px] font-sans font-bold tracking-widest uppercase px-3 py-1 rounded-sm">
+                  ✦ {loc.badge}
+                </span>
+              )}
               <button className="text-gold text-sm font-sans font-semibold flex items-center gap-2 hover:gap-3 transition-all duration-300 group">
                 Get Directions <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </button>
