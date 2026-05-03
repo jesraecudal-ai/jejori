@@ -42,12 +42,26 @@ export default function Footer() {
           {/* Hours */}
           <div>
             <h4 className="font-serif text-lg text-gold mb-4">Hours</h4>
-            <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                <Clock size={16} className="text-gold shrink-0" />
-                <p className="text-[#F2F2F2]/60 text-sm font-sans">Tue–Sun: 6PM – 12AM</p>
+            <div className="space-y-4">
+              <div>
+                <p className="text-gold/70 text-xs font-sans font-semibold tracking-widest uppercase mb-1">Centro — Gravataí</p>
+                <div className="flex items-start gap-2">
+                  <Clock size={14} className="text-gold shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-[#F2F2F2]/60 text-xs font-sans">Seg–Sáb: 11h–15h (almoço)</p>
+                    <p className="text-[#F2F2F2]/60 text-xs font-sans">Dom: 19h–23h (jantar)</p>
+                  </div>
+                </div>
               </div>
-              <p className="text-[#F2F2F2]/40 text-sm font-sans pl-6">Closed Mondays</p>
+              <div>
+                <p className="text-gold/70 text-xs font-sans font-semibold tracking-widest uppercase mb-1">Cidade Baixa — POA</p>
+                <div className="flex items-start gap-2">
+                  <Clock size={14} className="text-gold shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-[#F2F2F2]/60 text-xs font-sans">Seg–Sáb: 19h–23h (jantar)</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 

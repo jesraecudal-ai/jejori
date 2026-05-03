@@ -7,13 +7,13 @@ const locations = [
   {
     name: "Centro — Gravataí",
     address: "R. Cônego Pedro Wagner, 782 — Centro, Gravataí, RS",
-    hours: "Tue–Sun: 6PM – 12AM",
+    hours: ["Seg–Sáb: 11h–15h (almoço)", "Dom: 19h–23h (jantar)"],
     badge: null,
   },
   {
     name: "Cidade Baixa — Porto Alegre",
     address: "R. Luís Afonso, 26 — Cidade Baixa, Porto Alegre, RS",
-    hours: "Re-launching 2026",
+    hours: ["Seg–Sáb: 19h–23h (jantar)"],
     badge: "New Bigger Space Coming 2026",
   },
 ];
@@ -37,13 +37,17 @@ export default function LocationsSection() {
             >
               <h3 className="font-serif text-2xl font-bold text-gold mb-4">{loc.name}</h3>
               <div className="space-y-3 mb-6">
-                <div className="flex items-center gap-3 text-[#F2F2F2]/60 text-sm font-sans">
-                  <MapPin size={16} className="text-gold shrink-0" />
+                <div className="flex items-start gap-3 text-[#F2F2F2]/60 text-sm font-sans">
+                  <MapPin size={16} className="text-gold shrink-0 mt-0.5" />
                   {loc.address}
                 </div>
-                <div className="flex items-center gap-3 text-[#F2F2F2]/60 text-sm font-sans">
-                  <Clock size={16} className="text-gold shrink-0" />
-                  {loc.hours}
+                <div className="flex items-start gap-3 text-[#F2F2F2]/60 text-sm font-sans">
+                  <Clock size={16} className="text-gold shrink-0 mt-0.5" />
+                  <div className="space-y-0.5">
+                    {loc.hours.map((h) => (
+                      <p key={h}>{h}</p>
+                    ))}
+                  </div>
                 </div>
               </div>
               {loc.badge && (
