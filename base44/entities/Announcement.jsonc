@@ -1,0 +1,44 @@
+{
+  "name": "Announcement",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Announcement title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Announcement body text"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "events",
+        "hours",
+        "promotions"
+      ],
+      "description": "Announcement category"
+    },
+    "urgency_tag": {
+      "type": "string",
+      "description": "Urgency label like 'Tonight Only', 'New'"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Optional image"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "valid_until": {
+      "type": "string",
+      "format": "date",
+      "description": "Expiry date"
+    }
+  },
+  "required": [
+    "title",
+    "category"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "FranchiseInquiry",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Inquirer's full name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Contact email"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Contact phone"
+    },
+    "city": {
+      "type": "string",
+      "description": "Desired city/region"
+    },
+    "investment_range": {
+      "type": "string",
+      "enum": [
+        "under_100k",
+        "100k_250k",
+        "250k_500k",
+        "above_500k"
+      ],
+      "description": "Investment capacity"
+    },
+    "message": {
+      "type": "string",
+      "description": "Additional message"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "contacted",
+        "in_discussion",
+        "closed"
+      ],
+      "default": "new"
+    }
+  },
+  "required": [
+    "full_name",
+    "email"
+  ]
+}

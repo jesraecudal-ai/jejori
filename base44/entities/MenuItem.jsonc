@@ -1,0 +1,59 @@
+{
+  "name": "MenuItem",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the dish"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short description of the dish"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price of the dish"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "starters",
+        "main_dishes",
+        "drinks",
+        "desserts"
+      ],
+      "description": "Menu category"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL of the dish image"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "popular",
+          "spicy",
+          "new",
+          "chefs_pick"
+        ]
+      },
+      "description": "Tags for the menu item"
+    },
+    "is_available": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the item is currently available"
+    },
+    "sort_order": {
+      "type": "number",
+      "default": 0,
+      "description": "Sort order within category"
+    }
+  },
+  "required": [
+    "name",
+    "category"
+  ]
+}
