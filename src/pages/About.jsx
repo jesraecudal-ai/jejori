@@ -150,6 +150,27 @@ export default function About() {
           </div>
         </motion.div>
 
+        {/* Owners Photo */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="mb-20 text-center"
+        >
+          <div className="relative inline-block">
+            <img
+              src="https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/5799de77a_WhatsAppImage2026-05-03at180311.jpg"
+              alt="Jesrae e Marjorie — fundadores do Jejori Dimsum Haus"
+              className="w-full max-w-xl mx-auto rounded-lg object-cover border border-[#D4AF37]/20"
+            />
+            <div className="mt-4">
+              <p className="text-gold font-serif text-lg font-semibold">Jesrae & Marjorie</p>
+              <p className="text-[#F2F2F2]/45 font-sans text-sm mt-1">Fundadores do Jejori Dimsum Haus</p>
+            </div>
+          </div>
+        </motion.div>
+
         {/* More than a Restaurant */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
