@@ -4,7 +4,7 @@ import GoldButton from "../components/shared/GoldButton";
 import { MapPin } from "lucide-react";
 
 const HERO_IMAGE = "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/f2ecc5321_WhatsAppImage2026-05-03at180312.jpg";
-const INTERIOR_IMAGE = "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/f2ecc5321_WhatsAppImage2026-05-03at180312.jpg";
+const INTERIOR_IMAGE = "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/e4b6fa32a_WhatsAppImage2026-05-03at180310.jpg";
 
 const journey = [
   { place: "Singapura", desc: "Jesrae vivencia a cultura gastronômica asiática autêntica através de mercados tradicionais e cozinhas locais, aprofundando sua conexão pessoal com a herança asiática." },
