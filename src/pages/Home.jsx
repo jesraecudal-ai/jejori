@@ -6,8 +6,8 @@ import LocationsSection from "../components/home/LocationsSection";
 import ReviewsSection from "../components/home/ReviewsSection";
 import FinalCTA from "../components/home/FinalCTA";
 
-const HERO_IMAGE = "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/aae1a996d_generated_68b9d686.png";
-const ABOUT_IMAGE = "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/5c65208d5_generated_e66787bc.png";
+const HERO_IMAGE = "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/f2ecc5321_WhatsAppImage2026-05-03at180312.jpg";
+const ABOUT_IMAGE = "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/f2ecc5321_WhatsAppImage2026-05-03at180312.jpg";
 const DISH_IMAGES = [
   "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/8e5c13ab9_generated_4554f765.png",
   "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/c15111e2e_generated_040fcced.png",
