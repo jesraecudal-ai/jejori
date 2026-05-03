@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Flame, ArrowRight } from "lucide-react";
+import { Flame } from "lucide-react";
 
 export default function AnnouncementStrip() {
   return (
@@ -10,12 +10,7 @@ export default function AnnouncementStrip() {
         <span className="text-[#F2F2F2] font-sans text-sm font-semibold tracking-wide">
           🔥 Aberto Hoje — DJ ao Vivo + Novo Menu Sazonal
         </span>
-        <Link
-          to="/announcements"
-          className="text-gold text-sm font-sans font-semibold flex items-center gap-1 hover:underline"
-        >
-          Ver Tudo <ArrowRight size={14} />
-        </Link>
+
       </div>
     </div>
   );
