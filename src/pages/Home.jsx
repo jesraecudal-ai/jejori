@@ -1,6 +1,5 @@
 import React from "react";
 import HeroSection from "../components/home/HeroSection";
-import AnnouncementStrip from "../components/home/AnnouncementStrip";
 import FeaturedDishes from "../components/home/FeaturedDishes";
 import LocationsSection from "../components/home/LocationsSection";
 import ReviewsSection from "../components/home/ReviewsSection";
@@ -19,7 +18,6 @@ export default function Home() {
   return (
     <div>
       <HeroSection heroImage={HERO_IMAGE} />
-      <AnnouncementStrip />
       <FeaturedDishes />
       <LocationsSection />
       <ReviewsSection />
