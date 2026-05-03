@@ -56,9 +56,6 @@ export default function HeroSection({ heroImage }) {
           transition={{ duration: 0.6, delay: 0.9 }}
           className="flex flex-col sm:flex-row gap-4"
         >
-          <GoldButton to="/reserve" className="animate-pulse-glow">
-            Reserve a Table
-          </GoldButton>
           <GoldButton to="/menu" variant="ghost">
             View Menu
           </GoldButton>
