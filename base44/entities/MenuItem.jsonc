@@ -12,15 +12,46 @@
     },
     "price": {
       "type": "number",
-      "description": "Price of the dish"
+      "description": "Base price (if single price)"
+    },
+    "variants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Variant options like '3 pcs - 19.9'"
+    },
+    "cooking": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Cooking methods e.g. Steamed, Fried"
+    },
+    "flavors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Flavor options"
+    },
+    "add_ons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Optional add-ons"
     },
     "category": {
       "type": "string",
       "enum": [
-        "starters",
-        "main_dishes",
-        "drinks",
-        "desserts"
+        "dumplings",
+        "spring_rolls",
+        "buns_rice",
+        "soups",
+        "noodles",
+        "chicken",
+        "rice_snacks"
       ],
       "description": "Menu category"
     },

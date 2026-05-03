@@ -2,10 +2,13 @@ import React from "react";
 
 const categories = [
   { key: "all", label: "Todos" },
-  { key: "starters", label: "Entradas" },
-  { key: "main_dishes", label: "Pratos Principais" },
-  { key: "drinks", label: "Bebidas" },
-  { key: "desserts", label: "Sobremesas" },
+  { key: "dumplings", label: "Dumplings" },
+  { key: "spring_rolls", label: "Spring Rolls" },
+  { key: "buns_rice", label: "Pães & Arroz" },
+  { key: "soups", label: "Sopas" },
+  { key: "noodles", label: "Macarrão" },
+  { key: "chicken", label: "Frango" },
+  { key: "rice_snacks", label: "Snacks de Arroz" },
 ];
 
 const filters = [

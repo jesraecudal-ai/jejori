@@ -9,10 +9,13 @@ import GoldButton from "../components/shared/GoldButton";
 import { Loader2 } from "lucide-react";
 
 const categoryLabels = {
-  starters: "Entradas",
-  main_dishes: "Pratos Principais",
-  drinks: "Bebidas",
-  desserts: "Sobremesas",
+  dumplings: "Dumplings",
+  spring_rolls: "Spring Rolls (Lumpia)",
+  buns_rice: "Pães & Arroz",
+  soups: "Sopas",
+  noodles: "Macarrão",
+  chicken: "Frango",
+  rice_snacks: "Snacks de Arroz",
 };
 
 export default function Menu() {
