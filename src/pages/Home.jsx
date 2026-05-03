@@ -20,7 +20,7 @@ export default function Home() {
     <div>
       <HeroSection heroImage={HERO_IMAGE} />
       <AnnouncementStrip />
-      <FeaturedDishes images={DISH_IMAGES} />
+      <FeaturedDishes />
       <LocationsSection />
       <ReviewsSection />
       <FinalCTA bgImage={ABOUT_IMAGE} />
