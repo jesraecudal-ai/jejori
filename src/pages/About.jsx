@@ -220,6 +220,31 @@ export default function About() {
           />
         </motion.div>
 
+        {/* Name Change */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="mb-20"
+        >
+          <div className="flex items-center gap-4 mb-8">
+            <h2 className="font-serif text-3xl font-bold text-gold whitespace-nowrap">✨ De Dimsum Haus para Asian Haus</h2>
+            <div className="flex-1 h-px bg-ember/30" />
+          </div>
+          <div className="border border-[#D4AF37]/15 rounded-lg p-8 bg-walnut/10">
+            <p className="text-[#F2F2F2]/65 font-sans text-base leading-[1.9] mb-6">
+              Começamos como <span className="text-gold font-semibold">Jejori Dimsum Haus</span> — o dim sum era o prato que mais nos empolgava, o favorito pessoal dos nossos fundadores, moldado por anos de experiência em Hong Kong.
+            </p>
+            <p className="text-[#F2F2F2]/65 font-sans text-base leading-[1.9] mb-6">
+              Mas ao longo do caminho percebemos que limitar o nome a um único prato seria <span className="text-gold italic">subestimar quem somos de verdade</span>. Somos filipinos. Carregamos uma identidade cultural rica, conectada a toda a Ásia — Filipino com descendência japonesa, vivências em Singapura, Hong Kong e pelo mundo.
+            </p>
+            <p className="text-[#F2F2F2]/65 font-sans text-base leading-[1.9]">
+              Assim nasceu o <span className="text-gold font-semibold">Jejori Asian Haus</span>: um nome que abraça quem somos — servindo os favoritos asiáticos e filipinos autênticos, com o dim sum no coração, mas sem fronteiras no cardápio.
+            </p>
+          </div>
+        </motion.div>
+
         {/* Mission / Vision / Commitment */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
