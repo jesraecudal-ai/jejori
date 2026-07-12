@@ -25,7 +25,7 @@ export default function HeroSection({ heroImage }) {
           className="mb-6"
         >
           <span className="text-gold font-sans text-sm tracking-[0.4em] uppercase">
-            Gastronomia Asiática Autêntica
+            Culinária Asiática &amp; Filipina Autêntica
           </span>
         </motion.div>
 

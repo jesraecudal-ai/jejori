@@ -11,11 +11,11 @@ export default function Footer() {
           <div>
             <img
               src="https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/28f4dca2e_JEJORILOGO1.png"
-              alt="Jejori Dimsum Haus"
+              alt="Jejori Asian Haus"
               className="h-20 w-20 object-contain invert mb-4"
             />
             <p className="text-[#F2F2F2]/50 font-sans text-sm leading-relaxed">
-              Onde a noite encontra o sabor. Uma experiência gastronômica asiática autêntica feita para a alma.
+              Onde a noite encontra o sabor. Culinária asiática e filipina autêntica, feita para a alma.
             </p>
           </div>
 
@@ -53,7 +53,6 @@ export default function Footer() {
                   <Clock size={14} className="text-gold shrink-0 mt-0.5" />
                   <div>
                     <p className="text-[#F2F2F2]/60 text-xs font-sans">Seg–Sáb: 11h–15h (almoço)</p>
-                    <p className="text-[#F2F2F2]/60 text-xs font-sans">Dom: 19h–23h (jantar)</p>
                   </div>
                 </div>
               </div>
@@ -73,12 +72,12 @@ export default function Footer() {
           <div>
             <h4 className="font-serif text-lg text-gold mb-4">Redes Sociais</h4>
             <div className="space-y-3">
-              <a href="https://instagram.com/jejoridimsumhaus" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#F2F2F2]/60 hover:text-gold transition-colors text-sm font-sans">
-                <Instagram size={16} /> @jejoridimsumhaus
+              <a href="https://instagram.com/jejoriasianhaus" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#F2F2F2]/60 hover:text-gold transition-colors text-sm font-sans">
+                <Instagram size={16} /> @jejoriasianhaus
               </a>
-              <a href="https://tiktok.com/@jejoridimsumhaus" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#F2F2F2]/60 hover:text-gold transition-colors text-sm font-sans">
+              <a href="https://tiktok.com/@jejoriasianhaus" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#F2F2F2]/60 hover:text-gold transition-colors text-sm font-sans">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
-                @jejoridimsumhaus
+                @jejoriasianhaus
               </a>
               <a href="https://wa.me/5551920027578" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#F2F2F2]/60 hover:text-gold transition-colors text-sm font-sans">
                 <Phone size={16} /> +55 51 92002-7578

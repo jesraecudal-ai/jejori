@@ -39,7 +39,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center">
           <img
             src="https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/28f4dca2e_JEJORILOGO1.png"
-            alt="Jejori Dimsum Haus"
+            alt="Jejori Asian Haus"
             className="h-12 w-12 object-contain invert"
           />
         </Link>

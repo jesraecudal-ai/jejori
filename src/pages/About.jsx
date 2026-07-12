@@ -10,7 +10,7 @@ const journey = [
   { place: "Singapura", desc: "Jesrae vivencia a cultura gastronômica asiática autêntica através de mercados tradicionais e cozinhas locais, aprofundando sua conexão pessoal com a herança asiática." },
   { place: "Hong Kong", desc: "Marjorie treina e trabalha por 7 anos em um dos maiores centros de culinária chinesa do mundo, dominando o dim sum e a disciplina de cozinha profissional." },
   { place: "Uruguai", desc: "A carreira global de Jesrae continua, carregando os sabores e a mentalidade sistêmica que mais tarde moldariam o Jejori." },
-  { place: "Gravataí, Brasil", desc: "Os dois caminhos convergem. Em 2025, o Jejori Dimsum Haus abre na R. Cônego Pedro Wagner, 782 — Centro, Gravataí." },
+  { place: "Gravataí, Brasil", desc: "Os dois caminhos convergem. Em 2025, o Jejori Asian Haus abre na R. Cônego Pedro Wagner, 782 — Centro, Gravataí." },
   { place: "Porto Alegre, 2026", desc: "A unidade Cidade Baixa (R. Luís Afonso, 26) é relançada em um novo espaço maior — levando a experiência asiática autêntica do Jejori a um público ainda maior em Porto Alegre." },
 ];
 
@@ -44,7 +44,7 @@ export default function About() {
               Gravataí, Brasil
             </span>
             <h1 className="font-serif text-5xl md:text-7xl font-bold text-[#F2F2F2]">
-              Jejori <span className="text-gold">Dimsum Haus</span>
+              Jejori <span className="text-gold">Asian Haus</span>
             </h1>
             <p className="text-[#F2F2F2]/50 font-sans text-base mt-4 max-w-xl mx-auto">
               Nascido de jornadas internacionais, herança cultural e uma paixão compartilhada pela culinária asiática autêntica.
@@ -161,12 +161,12 @@ export default function About() {
           <div className="relative inline-block">
             <img
               src="https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/5799de77a_WhatsAppImage2026-05-03at180311.jpg"
-              alt="Jesrae e Marjorie — fundadores do Jejori Dimsum Haus"
+              alt="Jesrae e Marjorie — fundadores do Jejori Asian Haus"
               className="w-full max-w-xl mx-auto rounded-lg object-cover border border-[#D4AF37]/20"
             />
             <div className="mt-4">
               <p className="text-gold font-serif text-lg font-semibold">Jesrae & Marjorie</p>
-              <p className="text-[#F2F2F2]/45 font-sans text-sm mt-1">Fundadores do Jejori Dimsum Haus</p>
+              <p className="text-[#F2F2F2]/45 font-sans text-sm mt-1">Fundadores do Jejori Asian Haus</p>
             </div>
           </div>
         </motion.div>
