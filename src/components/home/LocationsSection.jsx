@@ -7,7 +7,7 @@ const locations = [
   {
     name: "Centro — Gravataí",
     address: "R. Cônego Pedro Wagner, 782 — Centro, Gravataí, RS",
-    hours: ["Seg–Sáb: 11h–15h (almoço)", "Dom: 19h–23h (jantar)"],
+    hours: ["Seg–Sáb: 11h–15h (almoço)"],
     badge: null,
   },
   {
