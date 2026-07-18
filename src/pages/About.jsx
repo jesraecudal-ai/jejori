@@ -273,7 +273,7 @@ export default function About() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0B0B0B]/50 to-[#0B0B0B]" />
         <div className="absolute inset-0 flex items-end justify-center pb-16 px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center">
-            <span className="text-gold font-sans text-sm tracking-[0.4em] uppercase mb-4 block hidden">{t.heroTag}</span>
+            
             <h1 className="font-serif text-5xl md:text-7xl font-bold text-[#F2F2F2]">
               Jejori <span className="text-gold">Asian Haus</span>
             </h1>
