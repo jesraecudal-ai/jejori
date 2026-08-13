@@ -1,0 +1,54 @@
+{
+  "name": "OpeningInterest",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Inquirer's name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Contact email"
+    },
+    "city": {
+      "type": "string",
+      "description": "City of interest (e.g. Montevideo)"
+    },
+    "message": {
+      "type": "string",
+      "description": "Optional note"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "notified",
+        "closed"
+      ],
+      "default": "new",
+      "description": "Processing status"
+    }
+  },
+  "required": [
+    "full_name",
+    "email"
+  ],
+  "rls": {
+    "create": {},
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

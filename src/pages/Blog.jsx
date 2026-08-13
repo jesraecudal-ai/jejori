@@ -4,12 +4,22 @@ import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Loader2 } from "lucide-react";
-import SectionHeader from "../components/shared/SectionHeader";
+import { useOperation } from "@/lib/OperationContext";
+import { operations } from "@/data/operations";
 
 export default function Blog() {
+  const { operation } = useOperation();
+  const op = operations[operation] || operations.brasil;
+  const isUruguai = op.key === "uruguai";
+
   const { data: posts = [], isLoading } = useQuery({
-    queryKey: ["blogPosts"],
-    queryFn: () => base44.entities.BlogPost.filter({ is_published: true }, "-created_date", 50),
+    queryKey: ["blogPosts", op.key],
+    queryFn: () =>
+      base44.entities.BlogPost.filter(
+        { is_published: true, operation: op.key },
+        "-created_date",
+        50
+      ),
   });
 
   return (
@@ -20,10 +30,12 @@ export default function Blog() {
           animate={{ opacity: 1, y: 0 }}
           className="font-serif text-5xl md:text-7xl font-bold text-gold mb-4"
         >
-          Diário
+          {isUruguai ? "Diario" : "Diário"}
         </motion.h1>
         <p className="text-[#F2F2F2]/50 font-sans text-lg max-w-lg mx-auto">
-          Histórias da cozinha, do bar e da noite
+          {isUruguai
+            ? "Historias desde la cocina y la noche · Montevideo"
+            : "Histórias da cozinha, do bar e da noite"}
         </p>
         <div className="flex items-center justify-center gap-4 mt-6">
           <div className="h-px w-16 bg-ember" />
@@ -39,7 +51,11 @@ export default function Blog() {
           </div>
         ) : posts.length === 0 ? (
           <div className="text-center py-20">
-            <p className="text-[#F2F2F2]/40 font-sans text-lg">Em breve — as histórias estão fermentando</p>
+            <p className="text-[#F2F2F2]/40 font-sans text-lg">
+              {isUruguai
+                ? "Pronto — las historias están en preparación"
+                : "Em breve — as histórias estão fermentando"}
+            </p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -75,7 +91,7 @@ export default function Blog() {
                       {post.excerpt || post.content?.substring(0, 120) + "..."}
                     </p>
                     <span className="text-gold text-sm font-sans font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-                      Ler Mais <ArrowRight size={14} />
+                      {isUruguai ? "Leer más" : "Ler Mais"} <ArrowRight size={14} />
                     </span>
                   </div>
                 </Link>

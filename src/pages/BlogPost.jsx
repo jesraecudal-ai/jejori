@@ -4,14 +4,22 @@ import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { ArrowLeft, Loader2 } from "lucide-react";
+import { useOperation } from "@/lib/OperationContext";
+import { operations } from "@/data/operations";
 
 export default function BlogPost() {
-  const urlParams = new URLSearchParams(window.location.search);
+  const { operation } = useOperation();
+  const op = operations[operation] || operations.brasil;
   const slug = window.location.pathname.split("/blog/")[1];
 
   const { data: posts = [], isLoading } = useQuery({
-    queryKey: ["blogPost", slug],
-    queryFn: () => base44.entities.BlogPost.list("-created_date", 200),
+    queryKey: ["blogPost", slug, op.key],
+    queryFn: () =>
+      base44.entities.BlogPost.filter(
+        { is_published: true, operation: op.key },
+        "-created_date",
+        200
+      ),
   });
 
   const post = posts.find((p) => p.slug === slug || p.id === slug);

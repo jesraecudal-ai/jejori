@@ -5,12 +5,15 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
+import { OperationProvider } from '@/lib/OperationContext';
 
 import Layout from './components/layout/Layout';
-import Home from './pages/Home';
+import OperationSelector from './pages/OperationSelector';
+import BrazilLanding from './pages/BrazilLanding';
+import UruguayLanding from './pages/UruguayLanding';
 import Menu from './pages/Menu';
 import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
+import BlogPostPage from './pages/BlogPost';
 import About from './pages/About';
 import Franchise from './pages/Franchise';
 import Reserve from './pages/Reserve';
@@ -37,11 +40,13 @@ const AuthenticatedApp = () => {
 
   return (
     <Routes>
+      <Route path="/" element={<OperationSelector />} />
       <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
+        <Route path="/brasil" element={<BrazilLanding />} />
+        <Route path="/uruguai" element={<UruguayLanding />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/franchise" element={<Franchise />} />
         <Route path="/reserve" element={<Reserve />} />
@@ -54,12 +59,14 @@ const AuthenticatedApp = () => {
 function App() {
   return (
     <AuthProvider>
-      <QueryClientProvider client={queryClientInstance}>
-        <Router>
-          <AuthenticatedApp />
-        </Router>
-        <Toaster />
-      </QueryClientProvider>
+      <OperationProvider>
+        <QueryClientProvider client={queryClientInstance}>
+          <Router>
+            <AuthenticatedApp />
+          </Router>
+          <Toaster />
+        </QueryClientProvider>
+      </OperationProvider>
     </AuthProvider>
   )
 }

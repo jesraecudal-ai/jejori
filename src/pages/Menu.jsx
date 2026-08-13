@@ -7,6 +7,8 @@ import ViewToggle from "../components/menu/ViewToggle";
 import MenuCard from "../components/menu/MenuCard";
 import GoldButton from "../components/shared/GoldButton";
 import { Loader2 } from "lucide-react";
+import { useOperation } from "@/lib/OperationContext";
+import { operations } from "@/data/operations";
 
 const categoryLabels = {
   dumplings: "Dumplings",
@@ -22,10 +24,13 @@ export default function Menu() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [activeFilter, setActiveFilter] = useState(null);
   const [view, setView] = useState("visual");
+  const { operation } = useOperation();
+  const op = operations[operation] || operations.brasil;
+  const isUruguai = op.key === "uruguai";
 
   const { data: items = [], isLoading } = useQuery({
-    queryKey: ["menuItems"],
-    queryFn: () => base44.entities.MenuItem.list("sort_order", 200),
+    queryKey: ["menuItems", op.key],
+    queryFn: () => base44.entities.MenuItem.filter({ operation: op.key, is_available: true }, "sort_order", 200),
   });
 
   const filtered = items.filter((item) => {
@@ -35,12 +40,8 @@ export default function Menu() {
     return catMatch && filterMatch;
   });
 
-  // Chef's Picks section
-  const chefsPicks = items.filter(
-    (item) => item.tags?.includes("chefs_pick") && (item.is_available !== false)
-  );
+  const chefsPicks = items.filter((item) => item.tags?.includes("chefs_pick"));
 
-  // Group by category for display
   const grouped = {};
   filtered.forEach((item) => {
     const cat = item.category || "other";
@@ -57,10 +58,12 @@ export default function Menu() {
           animate={{ opacity: 1, y: 0 }}
           className="font-serif text-5xl md:text-7xl font-bold text-gold mb-4"
         >
-          Cardápio
+          {isUruguai ? "Menú" : "Cardápio"}
         </motion.h1>
         <p className="text-[#F2F2F2]/50 font-sans text-lg max-w-lg mx-auto">
-          Cada prato conta uma história de fumaça, tempero e alma
+          {isUruguai
+            ? "Cada plato cuenta una historia de humo, sazón y alma · Montevideo"
+            : "Cada prato conta uma história de fumaça, tempero e alma"}
         </p>
         <div className="flex items-center justify-center gap-4 mt-6">
           <div className="h-px w-16 bg-ember" />
@@ -80,7 +83,7 @@ export default function Menu() {
       {/* View Toggle + Count */}
       <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
         <span className="text-[#F2F2F2]/30 text-sm font-sans">
-          {filtered.length} {filtered.length !== 1 ? "itens" : "item"}
+          {filtered.length} {filtered.length !== 1 ? (isUruguai ? "ítems" : "itens") : isUruguai ? "ítem" : "item"}
         </span>
         <ViewToggle view={view} setView={setView} />
       </div>
@@ -93,15 +96,20 @@ export default function Menu() {
           </div>
         ) : filtered.length === 0 ? (
           <div className="text-center py-20">
-            <p className="text-[#F2F2F2]/40 font-sans text-lg">Nenhum item encontrado</p>
+            <p className="text-[#F2F2F2]/40 font-sans text-lg">
+              {isUruguai
+                ? "Próximamente — estamos preparando el menú de Montevideo"
+                : "Nenhum item encontrado"}
+            </p>
           </div>
         ) : (
           <>
-            {/* Chef's Picks */}
             {activeCategory === "all" && !activeFilter && chefsPicks.length > 0 && (
               <div className="mb-16">
                 <div className="flex items-center gap-4 mb-8">
-                  <h3 className="font-serif text-2xl font-bold text-gold">Escolhas do Chef</h3>
+                  <h3 className="font-serif text-2xl font-bold text-gold">
+                    {isUruguai ? "Elecciones del Chef" : "Escolhas do Chef"}
+                  </h3>
                   <div className="flex-1 h-px bg-ember/30" />
                 </div>
                 <div className={view === "visual" ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" : ""}>
@@ -112,7 +120,6 @@ export default function Menu() {
               </div>
             )}
 
-            {/* Grouped by category */}
             {Object.entries(grouped).map(([cat, catItems]) => (
               <div key={cat} className="mb-16">
                 <div className="flex items-center gap-4 mb-8">
@@ -135,14 +142,22 @@ export default function Menu() {
       {/* Bottom CTA */}
       <div className="py-20 px-6 text-center bg-gradient-to-t from-walnut/10 to-transparent">
         <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#F2F2F2] mb-3">
-          Com vontade de algo?
+          {isUruguai ? "¿Te antojás algo?" : "Com vontade de algo?"}
         </h2>
         <p className="text-[#F2F2F2]/50 font-sans mb-8">
-          Venha provar pessoalmente — nenhuma tela captura o aroma
+          {isUruguai
+            ? "Pronto podrás venir a probarlo en persona — Montevideo abre en breve"
+            : "Venha provar pessoalmente — nenhuma tela captura o aroma"}
         </p>
-        <GoldButton to="/about" className="animate-pulse-glow">
-          Visite-nos Hoje
-        </GoldButton>
+        {isUruguai ? (
+          <GoldButton to="/uruguai" className="animate-pulse-glow">
+            Quiero ser avisado
+          </GoldButton>
+        ) : (
+          <GoldButton to="/about" className="animate-pulse-glow">
+            Visite-nos Hoje
+          </GoldButton>
+        )}
       </div>
     </div>
   );

@@ -26,6 +26,15 @@
       "type": "string",
       "description": "Author name"
     },
+    "operation": {
+      "type": "string",
+      "enum": [
+        "brasil",
+        "uruguai"
+      ],
+      "default": "brasil",
+      "description": "Which operation/market this post belongs to"
+    },
     "is_published": {
       "type": "boolean",
       "default": false

@@ -55,6 +55,15 @@
       ],
       "description": "Menu category"
     },
+    "operation": {
+      "type": "string",
+      "enum": [
+        "brasil",
+        "uruguai"
+      ],
+      "default": "brasil",
+      "description": "Which operation/market this item belongs to"
+    },
     "image_url": {
       "type": "string",
       "description": "URL of the dish image"

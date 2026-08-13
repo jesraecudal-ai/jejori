@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
 import SectionHeader from "../shared/SectionHeader";
+import { useOperation } from "@/lib/OperationContext";
+import { operations } from "@/data/operations";
 
 const tagLabels = {
   popular: "Popular",
@@ -12,9 +14,13 @@ const tagLabels = {
 };
 
 export default function FeaturedDishes() {
+  const { operation } = useOperation();
+  const op = operations[operation] || operations.brasil;
+
   const { data: items = [] } = useQuery({
-    queryKey: ["featured-dishes"],
-    queryFn: () => base44.entities.MenuItem.filter({ is_available: true }),
+    queryKey: ["featured-dishes", op.key],
+    queryFn: () =>
+      base44.entities.MenuItem.filter({ is_available: true, operation: op.key }),
   });
 
   const featured = items
@@ -27,8 +33,12 @@ export default function FeaturedDishes() {
     <section className="py-24 px-6 bg-[#0B0B0B]">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
-          title="Destaques"
-          subtitle="Nossos pratos mais celebrados, preparados com fogo e intenção"
+          title={op.key === "uruguai" ? "Destacados" : "Destaques"}
+          subtitle={
+            op.key === "uruguai"
+              ? "Nuestros platos más celebrados, hechos con fuego e intención"
+              : "Nossos pratos mais celebrados, preparados com fogo e intenção"
+          }
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
