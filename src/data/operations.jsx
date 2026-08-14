@@ -28,7 +28,7 @@ export const operations = {
         address: "R. Luís Afonso, 26",
         fullAddress: "R. Luís Afonso, 26 — Cidade Baixa, Porto Alegre, RS",
         hours: ["Seg–Sáb: 19h–23h (jantar)"],
-        badge: "Relançamento 2026",
+        badge: null,
       },
     ],
     social: {

@@ -44,7 +44,7 @@ const content = {
       { place: "Hong Kong", desc: "Marjorie trabalha por 7 anos em um dos maiores centros de culinária chinesa do mundo, dominando o dim sum e a disciplina de cozinha profissional." },
       { place: "Uruguai", desc: "A jornada de Jesrae continua, carregando sabores e a mentalidade sistêmica que mais tarde moldariam o Jejori — e abrindo as portas para um futuro endereço na fronteira." },
       { place: "Gravataí, Brasil — 2025", desc: "Os dois caminhos convergem. O Jejori Asian Haus abre na R. Cônego Pedro Wagner, 782 — Centro, Gravataí — levando culinária filipina e asiática autêntica ao Sul do Brasil." },
-      { place: "Porto Alegre, Cidade Baixa — 2026", desc: "A unidade Cidade Baixa (R. Luís Afonso, 26) é relançada em um novo espaço maior, levando a experiência do Jejori a ainda mais pessoas em Porto Alegre." }]
+      { place: "Porto Alegre, Cidade Baixa", desc: "A unidade Cidade Baixa (R. Luís Afonso, 26) segue atendendo o público de Porto Alegre, levando a experiência do Jejori ao coração da cidade." }]
 
     },
     together: {
@@ -115,7 +115,7 @@ const content = {
       { place: "Hong Kong", desc: "Marjorie trabaja 7 años en uno de los mayores centros de cocina china del mundo, dominando el dim sum y la disciplina de cocina profesional." },
       { place: "Uruguay", desc: "El viaje de Jesrae continúa, cargando sabores y la mentalidad sistémica que luego darían forma a Jejori — y abriendo las puertas para una futura dirección en la frontera." },
       { place: "Gravataí, Brasil — 2025", desc: "Los dos caminos convergen. Jejori Asian Haus abre en R. Cônego Pedro Wagner, 782 — Centro, Gravataí — llevando cocina filipina y asiática auténtica al Sur de Brasil." },
-      { place: "Porto Alegre, Cidade Baixa — 2026", desc: "La unidad Cidade Baixa (R. Luís Afonso, 26) se relanza en un nuevo espacio más grande, llevando la experiencia Jejori a aún más personas en Porto Alegre." }]
+      { place: "Porto Alegre, Cidade Baixa", desc: "La unidad Cidade Baixa (R. Luís Afonso, 26) sigue atendiendo al público de Porto Alegre, llevando la experiencia Jejori al corazón de la ciudad." }]
 
     },
     together: {
@@ -186,7 +186,7 @@ const content = {
       { place: "Hong Kong", desc: "Marjorie works for 7 years in one of the world's greatest centers of Chinese cuisine, mastering dim sum and professional kitchen discipline." },
       { place: "Uruguay", desc: "Jesrae's journey continues, carrying flavors and the systems mindset that would later shape Jejori — and opening doors for a future location at the border." },
       { place: "Gravataí, Brasil — 2025", desc: "Two paths converge. Jejori Asian Haus opens at R. Cônego Pedro Wagner, 782 — Centro, Gravataí — bringing authentic Filipino and Asian cuisine to Southern Brazil." },
-      { place: "Porto Alegre, Cidade Baixa — 2026", desc: "The Cidade Baixa unit (R. Luís Afonso, 26) relaunches in a larger new space, bringing the Jejori experience to even more people in Porto Alegre." }]
+      { place: "Porto Alegre, Cidade Baixa", desc: "The Cidade Baixa unit (R. Luís Afonso, 26) continues to serve the Porto Alegre community, bringing the Jejori experience to the heart of the city." }]
 
     },
     together: {
