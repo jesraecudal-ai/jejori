@@ -51,7 +51,7 @@ export const operations = {
     city: "Montevideo, Uruguay",
     cities: "Montevideo · Uruguay",
     upcoming: true,
-    openingNote: "Abre en breve — Septiembre 2026",
+    openingNote: "Próximamente — fecha por confirmar",
     cardImage:
       "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/e4b6fa32a_WhatsAppImage2026-05-03at180310.jpg",
     heroImage:
@@ -62,12 +62,20 @@ export const operations = {
       title: "Donde la noche",
       highlight: "encuentra el sabor",
       subtitle:
-        "Una familia filipina trae Asia a Uruguay. Cocina filipina y asiática auténtica, pronto en Montevideo.",
+        "Una familia filipina trae Asia a Uruguay. Cocina filipina y asiática auténtica, pronto en Montevideo — fecha por confirmar.",
     },
     teaser: {
       title: "Una nueva mesa para Uruguay",
       body:
         "Antes de Singapur, antes de Hong Kong, antes de Brasil y Uruguay — hay una familia filipina. Portamos una identidad cultural rica y la traemos a Montevideo: dim sum en el corazón, sin fronteras en el menú, raigambre filipina lo primero.",
+    },
+    serviceModel: {
+      title: "Cómo empezamos en Montevideo",
+      intro:
+        "Cuando abramos, arrancamos con take-away y entregas a domicilio. Dine-in aún no está confirmado — depende del local que consigamos.",
+      takeAway: { label: "Take-away", desc: "Retirá tu pedido en el punto de Montevideo que confirmaremos al abrir." },
+      delivery: { label: "Entregas a domicilio", desc: "Pedidos por delivery (PedidosYa y otros en evaluación)." },
+      dineIn: { label: "Dine-in", desc: "Aún no confirmado — por depender, en cuanto tengamos un local apto lo habilitamos." },
     },
     notify: {
       title: "Quiero ser avisado",
@@ -83,7 +91,7 @@ export const operations = {
       handle: "@jejoriasianhaus",
     },
     footerTitle: "Ubicación",
-    footerHoursTitle: "Próximamente",
+    footerHoursTitle: "Próximamente · fecha por confirmar",
     taglineFooter:
       "Donde la noche encuentra el sabor. Cocina asiática y filipina auténtica, pronto en Montevideo.",
   },

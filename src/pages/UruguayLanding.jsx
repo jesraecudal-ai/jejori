@@ -101,6 +101,53 @@ export default function UruguayLanding() {
         </motion.div>
       </section>
 
+      {/* Service Model */}
+      <section className="py-24 px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="max-w-4xl mx-auto"
+        >
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-gold mb-4 text-center">
+            {op.serviceModel.title}
+          </h2>
+          <p className="text-[#F2F2F2]/60 font-sans text-base leading-[1.8] text-center mb-12 max-w-2xl mx-auto">
+            {op.serviceModel.intro}
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {[
+              { ...op.serviceModel.takeAway, badge: "Disponible al abrir" },
+              { ...op.serviceModel.delivery, badge: "Disponible al abrir" },
+              { ...op.serviceModel.dineIn, badge: "Por confirmar" },
+            ].map((s) => (
+              <div
+                key={s.label}
+                className={`border rounded-lg p-6 transition-all duration-500 hover:border-gold/40 ${
+                  s.badge === "Por confirmar"
+                    ? "border-[#D4AF37]/15 opacity-70 hover:opacity-100"
+                    : "border-[#D4AF37]/25 hover:shadow-[0_0_24px_rgba(212,175,55,0.08)]"
+                }`}
+              >
+                <span
+                  className={`inline-block text-[10px] font-sans font-bold tracking-widest uppercase px-3 py-1 rounded-sm mb-4 ${
+                    s.badge === "Por confirmar"
+                      ? "bg-muted text-[#F2F2F2]/50"
+                      : "bg-gold/15 border border-gold/30 text-gold"
+                  }`}
+                >
+                  {s.badge === "Por confirmar" ? "✦ Por confirmar" : "✓ " + s.badge}
+                </span>
+                <h3 className="font-serif text-xl font-bold text-[#F2F2F2] mb-2">{s.label}</h3>
+                <p className="text-[#F2F2F2]/50 font-sans text-sm leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
       {/* Notify CTA */}
       <section className="py-20 px-6 bg-gradient-to-t from-walnut/10 to-transparent">
         <motion.div
