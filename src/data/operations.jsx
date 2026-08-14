@@ -20,6 +20,8 @@ export const operations = {
         fullAddress: "R. Cônego Pedro Wagner, 782 — Centro, Gravataí, RS",
         hours: ["Seg–Sáb: 11h–15h (almoço)"],
         badge: null,
+        cardImage:
+          "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/f2ecc5321_WhatsAppImage2026-05-03at180312.jpg",
       },
       {
         key: "cidade_baixa",
@@ -29,6 +31,8 @@ export const operations = {
         fullAddress: "R. Luís Afonso, 26 — Cidade Baixa, Porto Alegre, RS",
         hours: ["Seg–Sáb: 19h–23h (jantar)"],
         badge: null,
+        cardImage:
+          "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/24262e9e2_Screenshot2026-08-13at94746PM.png",
       },
     ],
     social: {

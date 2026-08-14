@@ -7,8 +7,8 @@ import { useOperation } from "@/lib/OperationContext";
 
 // Flat list of every branch to display as cards.
 const branches = [
-  { ...operations.brasil.locations[0], operationKey: "brasil", cardImage: operations.brasil.cardImage },
-  { ...operations.brasil.locations[1], operationKey: "brasil", cardImage: operations.brasil.cardImage },
+  { ...operations.brasil.locations[0], operationKey: "brasil", cardImage: operations.brasil.locations[0].cardImage || operations.brasil.cardImage },
+  { ...operations.brasil.locations[1], operationKey: "brasil", cardImage: operations.brasil.locations[1].cardImage || operations.brasil.cardImage },
   {
     key: "montevideo",
     name: "Montevideo",
