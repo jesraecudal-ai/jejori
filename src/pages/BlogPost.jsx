@@ -82,6 +82,15 @@ export default function BlogPost({ operationOverride }) {
             {post.content || ""}
           </ReactMarkdown>
         </div>
+
+        <div className="mt-12 text-center">
+          <Link
+            to={`/${op.key}/menu`}
+            className="inline-block px-8 py-3 text-sm font-sans font-semibold tracking-widest uppercase rounded-sm bg-gold text-[#0B0B0B] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all duration-300"
+          >
+            Ver Menú
+          </Link>
+        </div>
       </div>
     </div>
   );
