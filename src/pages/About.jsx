@@ -149,6 +149,10 @@ export default function About({ operationOverride }) {
                 src={images.founders}
                 alt="Jesrae & Marjorie"
                 className="w-full max-w-xl mx-auto rounded-lg object-cover border border-[#D4AF37]/20" />
+              <div className="mt-4">
+                <p className="text-gold font-serif text-lg font-semibold">Jesrae & Marjorie</p>
+                <p className="text-[#F2F2F2]/45 font-sans text-sm mt-1">{t.foundersCaption}</p>
+              </div>
             </div>
           </motion.div>
         )}

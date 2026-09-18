@@ -271,7 +271,8 @@ export const uruguaiContent = {
     },
     cta: { tag: "Convidamos você a provar o capítulo deles", title: "Venha", highlight: "Provar a História Deles", btn: "Ver Menú" },
     founderNames: "Jesrae & a sua família",
-    founderCard: "Jesrae Cudal Laguna e a família — Montevideo, Uruguai"
+    founderCard: "Jesrae Cudal Laguna e a família — Montevideo, Uruguai",
+    foundersCaption: "Jesrae e Marjorie — os donos da marca Jejori. Cada país é dirigido de forma independente."
   },
 
   es: {
@@ -333,7 +334,8 @@ export const uruguaiContent = {
     },
     cta: { tag: "Te invitamos a probar el capítulo de ellos", title: "Ven a", highlight: "Probar Su Historia", btn: "Ver Menú" },
     founderNames: "Jesrae y su familia",
-    founderCard: "Jesrae Cudal Laguna y la familia — Montevideo, Uruguay"
+    founderCard: "Jesrae Cudal Laguna y la familia — Montevideo, Uruguay",
+    foundersCaption: "Jesrae y Marjorie — los dueños de la marca Jejori. Cada país lo dirigimos de forma independiente."
   },
 
   en: {
@@ -395,6 +397,7 @@ export const uruguaiContent = {
     },
     cta: { tag: "We invite you to taste their chapter", title: "Come", highlight: "Taste Their Story", btn: "View Menu" },
     founderNames: "Jesrae & his family",
-    founderCard: "Jesrae Cudal Laguna and the family — Montevideo, Uruguay"
+    founderCard: "Jesrae Cudal Laguna and the family — Montevideo, Uruguay",
+    foundersCaption: "Jesrae and Marjorie — the brand owners of Jejori. We run each country independently."
   }
 };
