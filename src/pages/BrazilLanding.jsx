@@ -3,6 +3,7 @@ import HeroSection from "@/components/home/HeroSection";
 import FeaturedDishes from "@/components/home/FeaturedDishes";
 import LocationsSection from "@/components/home/LocationsSection";
 import ReviewsSection from "@/components/home/ReviewsSection";
+import InstagramCarousel from "@/components/home/InstagramCarousel";
 import FinalCTA from "@/components/home/FinalCTA";
 import { useOperation } from "@/lib/OperationContext";
 
@@ -21,6 +22,7 @@ export default function BrazilLanding() {
       <FeaturedDishes />
       <LocationsSection />
       <ReviewsSection />
+      <InstagramCarousel />
       <FinalCTA bgImage={ABOUT_IMAGE} />
     </div>
   );
