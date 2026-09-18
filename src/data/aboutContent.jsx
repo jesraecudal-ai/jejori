@@ -213,21 +213,22 @@ export const brasilContent = {
 export const uruguaiContent = {
   pt: {
     heroTag: "Montevideo, Uruguai",
-    heroSub: "Uma nova página. O mesmo coração filipino. A minha própria casa no Uruguai.",
+    heroSub: "Uma nova página. O mesmo coração filipino. A minha família inteira, numa nova casa — Uruguai.",
     identity: {
-      title: "🇵🇭 O Meu Próprio Capítulo",
+      title: "🇵🇭 A Minha História — e a Minha Família",
       body: [
-      "O Jejori nasceu no Brasil. Mas esta página é minha.",
-      "Sou o Jesrae. Filipino com descendência japonesa. Entreguei o Jejori Asian Haus do Brasil à Marjorie — porque a cozinha daquele país pertence às mãos dela. E segui um chamado diferente: construir a minha própria casa, do zero, em Montevideo.",
-      "Isto não é uma filial do Brasil. É um começo novo — a mesma raiz filipina, mas a minha própria história, a minha própria mesa, o meu próprio nome."]
+      "Deixa eu te contar uma história. A minha história.",
+      "Sou o Jesrae. Filipino com descendência japonesa, Analista de Negócios Sênior de dia e chef de coração sempre. O Jejori nasceu no Brasil, das minhas mãos e das mãos da Marjorie. Cresceu, virou dois endereços, virou uma família.",
+      "Quando chegou a hora do próximo capítulo, eu não fui sozinho. Levei comigo a minha família inteira — minha mãe, meu pai, meu irmão e minha irmã. Uma casa filipina se muda junto. E em Montevideo estamos plantando a nossa própria mesa.",
+      "Não foi separação. Foi <strong>EXPANSÃO</strong>. O Brasil continua forte, nas mãos da Marjorie e da família dela. O Uruguai é a nossa nova casa — a mesma raiz, duas famílias, uma mesa que só cresce."]
     },
     kamayan: {
       title: "🔥 Chef de Coração",
-      body: "Dizem que sou um Analista de Negócios Sênior que viaja e come comida. Mas a verdade é outra. <strong>Sou um chef de coração.</strong> A planilha e o caldo, o relatório e a faca — para mim, nunca foram mundos separados. Cada país que vivi virou cozinha dentro de mim. Cozinhar não é o que eu faço depois do trabalho. É o trabalho. É quem eu sou. E agora, em Montevideo, é também o meu próprio restaurante."
+      body: "Dizem que sou um Analista de Negócios Sênior que viaja e come comida. Mas a verdade é outra. <strong>Sou um chef de coração.</strong> A planilha e o caldo, o relatório e a faca — para mim, nunca foram mundos separados. Cada país que vivi virou cozinha dentro de mim. Cozinhar não é o que eu faço depois do trabalho. É o trabalho. É quem eu sou. E agora, em Montevideo, com a minha família ao meu lado, é também o nosso próprio restaurante."
     },
     story: {
       title: "🌏 A Minha Jornada",
-      jesrae: "<strong>Jesrae Cudal Laguna</strong> — Filipino com descendência japonesa. Analista de Negócios Sênior de dia, chef de coração sempre. Singapura me ensinou a rua. O Brasil me ensinou a família. Agora o Uruguai me ensina a começar de novo — sozinho, com a minha própria mesa, levando o dim sum e a alma filipina a um país que ainda não os conhece como eu os carrego."
+      jesrae: "<strong>Jesrae Cudal Laguna</strong> — Filipino com descendência japonesa. Analista de Negócios Sênior de dia, chef de coração sempre. Singapura me ensinou a rua. O Brasil me ensinou a construir junto. Agora o Uruguai me ensina a começar de novo — não sozinho, mas com a minha família inteira ao meu lado: minha mãe, meu pai, meu irmão e minha irmã. Levamos juntos o dim sum e a alma filipina a um país que ainda não os conhece como nós os carregamos."
     },
     anchors: {
       title: "🧭 As Minhas Âncoras",
@@ -235,58 +236,61 @@ export const uruguaiContent = {
       { emoji: "🇵🇭", label: "Filipinas — A Raiz", desc: "Hospitalidade, mesa compartilhada, comunidade. De onde eu venho, não importa para onde vá." },
       { emoji: "🇯🇵", label: "Herança Japonesa", desc: "Precisão, respeito pela técnica, cuidado com cada detalhe — em cada processo, em cada prato." },
       { emoji: "🇸🇬", label: "Singapura", desc: "Onde vivi a rua, os mercados, a vida. A fonte da minha obsessão pela comida asiática autêntica." },
-      { emoji: "🇺🇾", label: "Uruguai — A Nova Casa", desc: "Montevideo. Onde começo do zero, humilde e honesto, com a minha própria cozinha." }]
+      { emoji: "👨‍👩‍👧‍👦", label: "A Minha Família", desc: "Mãe, pai, irmão e irmã. Vieram comigo para Montevideo. Uma casa filipina se muda junto." },
+      { emoji: "🇺🇾", label: "Uruguai — A Nova Casa", desc: "Montevideo. Onde plantamos a nossa própria mesa, humilde e honesto, do zero." }]
     },
     journey: {
       title: "A Minha Jornada",
       stops: [
       { place: "Filipinas", desc: "Onde tudo começou. Uma família, uma mesa, uma identidade que viajaria comigo pelo mundo inteiro." },
       { place: "Singapura", desc: "A rua me formou. Mercados, cozinhas locais, a vida vibrante da gastronomia asiática — comida como cultura, não como evento." },
-      { place: "Brasil — com a Marjorie", desc: "O Jejori nasceu dos dois. Construímos juntos o Jejori Asian Haus no Sul do Brasil." },
-      { place: "A Entrega", desc: "Entreguei o Jejori do Brasil à Marjorie. A cozinha daquele país pertence a ela. Eu precisava do meu próprio capítulo." },
-      { place: "Montevideo, Uruguai", desc: "A minha própria casa. Começo com take-away e delivery — humilde, honesto, do zero. A mesma alma filipina, agora em solo uruguaio." }]
+      { place: "Brasil — com a Marjorie", desc: "O Jejori nasceu dos dois. Cresceu e virou dois endereços no Sul do Brasil. Hoje é a Marjorie e a família dela que seguram aquela casa." },
+      { place: "A Expansão", desc: "Não foi despedida. Foi expansão. O Brasil ficou forte com a Marjorie; eu segui com a minha família — mãe, pai, irmão, irmã — para plantar a próxima mesa." },
+      { place: "Montevideo, Uruguai", desc: "A nossa nova casa. Chegamos em família, começamos com take-away e delivery — humilde, honesto, do zero. A mesma alma filipina, agora em solo uruguaio." }]
     },
     together: {
-      title: "🇺🇾 Por que o Uruguai",
-      body: "Por que Montevideo? Porque é aqui que quero provar que sou mais do que um currículo. Uma família filipina, uma mesa própria, num país que ainda não conhece o dim sum como eu o carrego. <em>Take-away e delivery no começo</em> — humilde, honesto, do zero. Sem o luxo do dine-in, mas com toda a intenção de chegar lá.",
-      jesrae: "A cozinha, a operação e a alma do Jejori Montevideo — tudo assinado por mim, do zero."
+      title: "🇺🇾 Uma Expansão, Não uma Separação",
+      body: "O Brasil não ficou para trás. Os dois restaurantes do Jejori no Brasil seguem fortes — agora nas mãos da Marjorie e da família dela, que cuidam daquela casa com o mesmo coração. E eu? Trouxe a minha família inteira — minha mãe, meu pai, meu irmão e minha irmã — para Montevideo. <em>Take-away e delivery no começo</em>, humilde e honesto, do zero. Não nos separamos. Somos a mesma família filipina, agora em duas casas, em dois países, uma mesa que só cresce.",
+      jesrae: "Jejori Montevideo — a cozinha, a operação e a alma, assinados por mim e pela minha família.",
+      marjorie: "Jejori Brasil — os dois endereços, sob os cuidados da Marjorie e da família dela."
     },
     nameChange: {
       title: "✨ De Dimsum Haus para Asian Haus",
       body: [
       "Começamos como <strong>Jejori Dimsum Haus</strong> — o dim sum era o favorito pessoal, moldado por anos de experiência em Hong Kong e o amor genuíno por este prato.",
       "Mas limitar o nome a um único prato seria <em>subestimar quem somos de verdade</em>. Somos filipinos. Carregamos uma identidade cultural rica, conectada a toda a Ásia.",
-      "Assim nasceu o <strong>Jejori Asian Haus</strong>: uma família filipina servindo os favoritos asiáticos com o dim sum no coração, sem fronteiras no cardápio. O mesmo nome, agora em Montevideo — a minha própria página."]
+      "Assim nasceu o <strong>Jejori Asian Haus</strong>: uma família filipina servindo os favoritos asiáticos com o dim sum no coração, sem fronteiras no cardápio. O mesmo nome, agora em duas casas — Brasil e Uruguai."]
     },
     pillars: {
-      title: "🏮 O Meu Propósito em Montevideo",
+      title: "🏮 O Nosso Propósito em Montevideo",
       items: [
-      { label: "Missão", text: "Trazer a culinária filipina e asiática autêntica ao Uruguai, do zero — começando humilde com take-away e delivery, sempre enraizada na hospitalidade filipina." },
-      { label: "Visão", text: "Construir o Jejori Montevideo como a minha própria casa — uma marca reconhecida pela autenticidade e consistência, nunca um conceito genérico pan-asiático." },
-      { label: "Compromisso", text: "Cada prato assinado por mim. Cada processo, cada detalhe. Sou Analista de Negócios Sênior e chef de coração — e esta mesa é minha." }]
+      { label: "Missão", text: "Trazer a culinária filipina e asiática autêntica ao Uruguai, em família — começando humilde com take-away e delivery, sempre enraizada na hospitalidade filipina." },
+      { label: "Visão", text: "Expandir o Jejori a um segundo país, como uma família — a mesma marca, o mesmo coração, agora em duas casas." },
+      { label: "Compromisso", text: "Cada prato assinado por mim e pela minha família. Não é separação do Brasil — é expansão. O Brasil segue com a Marjorie; o Uruguai segue conosco." }]
     },
-    cta: { tag: "Convido você a provar o meu capítulo", title: "Venha", highlight: "Provar a Minha História", btn: "Ver Menú" },
-    founderNames: "Jesrae",
-    founderCard: "Jesrae Cudal Laguna — Montevideo, Uruguai"
+    cta: { tag: "Convido você a provar o nosso capítulo", title: "Venha", highlight: "Provar a Nossa História", btn: "Ver Menú" },
+    founderNames: "Jesrae & a sua família",
+    founderCard: "Jesrae Cudal Laguna e a família — Montevideo, Uruguai"
   },
 
   es: {
     heroTag: "Montevideo, Uruguay",
-    heroSub: "Una nueva página. El mismo corazón filipino. Mi propia casa en Uruguay.",
+    heroSub: "Una nueva página. El mismo corazón filipino. Toda mi familia, en una nueva casa — Uruguay.",
     identity: {
-      title: "🇵🇭 Mi Propio Capítulo",
+      title: "🇵🇭 Mi Historia — y Mi Familia",
       body: [
-      "Jejori nació en Brasil. Pero esta página es mía.",
-      "Soy Jesrae. Filipino con ascendencia japonesa. Le entregué el Jejori Asian Haus de Brasil a Marjorie — porque la cocina de ese país pertenece a sus manos. Y seguí un llamado distinto: construir mi propia casa, desde cero, en Montevideo.",
-      "Esto no es una sucursal de Brasil. Es un comienzo nuevo — la misma raíz filipina, pero mi propia historia, mi propia mesa, mi propio nombre."]
+      "Déjame contarte una historia. Mi historia.",
+      "Soy Jesrae. Filipino con ascendencia japonesa, Analista de Negocios Senior de día y chef de corazón siempre. Jejori nació en Brasil, de mis manos y de las de Marjorie. Creció, se volvió dos direcciones, se volvió una familia.",
+      "Cuando llegó la hora del próximo capítulo, no me fui solo. Me llevé a toda mi familia — mi mamá, mi papá, mi hermano y mi hermana. Una casa filipina se muda junta. Y en Montevideo estamos plantando nuestra propia mesa.",
+      "No fue separación. Fue <strong>EXPANSIÓN</strong>. Brasil sigue fuerte, en manos de Marjorie y de su familia. Uruguay es nuestra nueva casa — la misma raíz, dos familias, una mesa que solo crece."]
     },
     kamayan: {
       title: "🔥 Chef de Corazón",
-      body: "Dicen que soy un Analista de Negocios Senior que viaja y come comida. Pero la verdad es otra. <strong>Soy un chef de corazón.</strong> La planilla y el caldo, el informe y el cuchillo — para mí, nunca fueron mundos separados. Cada país que viví se volvió cocina dentro de mí. Cocinar no es lo que hago después del trabajo. Es el trabajo. Es quien soy. Y ahora, en Montevideo, es también mi propio restaurante."
+      body: "Dicen que soy un Analista de Negocios Senior que viaja y come comida. Pero la verdad es otra. <strong>Soy un chef de corazón.</strong> La planilla y el caldo, el informe y el cuchillo — para mí, nunca fueron mundos separados. Cada país que viví se volvió cocina dentro de mí. Cocinar no es lo que hago después del trabajo. Es el trabajo. Es quien soy. Y ahora, en Montevideo, con mi familia a mi lado, es también nuestro propio restaurante."
     },
     story: {
       title: "🌏 Mi Viaje",
-      jesrae: "<strong>Jesrae Cudal Laguna</strong> — Filipino con ascendencia japonesa. Analista de Negocios Senior de día, chef de corazón siempre. Singapur me enseñó la calle. Brasil me enseñó la familia. Ahora Uruguay me enseña a empezar de nuevo — solo, con mi propia mesa, llevando el dim sum y el alma filipina a un país que aún no los conoce como yo los cargo."
+      jesrae: "<strong>Jesrae Cudal Laguna</strong> — Filipino con ascendencia japonesa. Analista de Negocios Senior de día, chef de corazón siempre. Singapur me enseñó la calle. Brasil me enseñó a construir juntos. Ahora Uruguay me enseña a empezar de nuevo — no solo, sino con toda mi familia a mi lado: mi mamá, mi papá, mi hermano y mi hermana. Llevamos juntos el dim sum y el alma filipina a un país que aún no los conoce como nosotros los cargamos."
     },
     anchors: {
       title: "🧭 Mis Anclas",
@@ -294,58 +298,61 @@ export const uruguaiContent = {
       { emoji: "🇵🇭", label: "Filipinas — La Raíz", desc: "Hospitalidad, mesa compartida, comunidad. De donde vengo, no importa a dónde vaya." },
       { emoji: "🇯🇵", label: "Herencia Japonesa", desc: "Precisión, respeto por la técnica, cuidado en cada detalle — en cada proceso, en cada plato." },
       { emoji: "🇸🇬", label: "Singapur", desc: "Donde viví la calle, los mercados, la vida. La fuente de mi obsesión por la comida asiática auténtica." },
-      { emoji: "🇺🇾", label: "Uruguay — La Nueva Casa", desc: "Montevideo. Donde empiezo desde cero, humilde y honesto, con mi propia cocina." }]
+      { emoji: "👨‍👩‍👧‍👦", label: "Mi Familia", desc: "Mamá, papá, hermano y hermana. Vinieron conmigo a Montevideo. Una casa filipina se muda junta." },
+      { emoji: "🇺🇾", label: "Uruguay — La Nueva Casa", desc: "Montevideo. Donde plantamos nuestra propia mesa, humilde y honesto, desde cero." }]
     },
     journey: {
       title: "Mi Viaje",
       stops: [
       { place: "Filipinas", desc: "Donde todo comenzó. Una familia, una mesa, una identidad que viajaría conmigo por el mundo entero." },
       { place: "Singapur", desc: "La calle me formó. Mercados, cocinas locales, la vida vibrante de la gastronomía asiática — comida como cultura, no como evento." },
-      { place: "Brasil — con Marjorie", desc: "Jejori nació de los dos. Construimos juntos el Jejori Asian Haus en el Sur de Brasil." },
-      { place: "La Entrega", desc: "Le entregué el Jejori de Brasil a Marjorie. La cocina de ese país le pertenece. Yo necesitaba mi propio capítulo." },
-      { place: "Montevideo, Uruguay", desc: "Mi propia casa. Arranco con take-away y delivery — humilde, honesto, desde cero. El mismo alma filipina, ahora en suelo uruguayo." }]
+      { place: "Brasil — con Marjorie", desc: "Jejori nació de los dos. Creció y se volvió dos direcciones en el Sur de Brasil. Hoy es Marjorie y su familia quienes sostienen esa casa." },
+      { place: "La Expansión", desc: "No fue despedida. Fue expansión. Brasil quedó fuerte con Marjorie; yo seguí con mi familia — mamá, papá, hermano, hermana — a plantar la próxima mesa." },
+      { place: "Montevideo, Uruguay", desc: "Nuestra nueva casa. Llegamos en familia, arrancamos con take-away y delivery — humilde, honesto, desde cero. El mismo alma filipina, ahora en suelo uruguayo." }]
     },
     together: {
-      title: "🇺🇾 Por qué Uruguay",
-      body: "¿Por qué Montevideo? Porque es aquí donde quiero demostrar que soy más que un currículum. Una familia filipina, una mesa propia, en un país que aún no conoce el dim sum como yo lo cargo. <em>Take-away y delivery al principio</em> — humilde, honesto, desde cero. Sin el lujo del dine-in, pero con toda la intención de llegar ahí.",
-      jesrae: "La cocina, la operación y el alma de Jejori Montevideo — todo firmado por mí, desde cero."
+      title: "🇺🇾 Una Expansión, No una Separación",
+      body: "Brasil no se quedó atrás. Los dos restaurantes de Jejori en Brasil siguen fuertes — ahora en manos de Marjorie y de su familia, que cuidan esa casa con el mismo corazón. ¿Y yo? Traje a toda mi familia — mi mamá, mi papá, mi hermano y mi hermana — a Montevideo. <em>Take-away y delivery al principio</em>, humilde y honesto, desde cero. No nos separamos. Somos la misma familia filipina, ahora en dos casas, en dos países, una mesa que solo crece.",
+      jesrae: "Jejori Montevideo — la cocina, la operación y el alma, firmados por mí y por mi familia.",
+      marjorie: "Jejori Brasil — las dos direcciones, bajo el cuidado de Marjorie y de su familia."
     },
     nameChange: {
       title: "✨ De Dimsum Haus a Asian Haus",
       body: [
       "Comenzamos como <strong>Jejori Dimsum Haus</strong> — el dim sum era el favorito personal, moldeado por años de experiencia en Hong Kong y el amor genuino por este plato.",
       "Pero limitar el nombre a un solo plato sería <em>subestimar quiénes somos en realidad</em>. Somos filipinos. Llevamos una identidad cultural rica, conectada con toda Asia.",
-      "Así nació <strong>Jejori Asian Haus</strong>: una familia filipina sirviendo los favoritos asiáticos con el dim sum en el corazón, sin fronteras en el menú. El mismo nombre, ahora en Montevideo — mi propia página."]
+      "Así nació <strong>Jejori Asian Haus</strong>: una familia filipina sirviendo los favoritos asiáticos con el dim sum en el corazón, sin fronteras en el menú. El mismo nombre, ahora en dos casas — Brasil y Uruguay."]
     },
     pillars: {
-      title: "🏮 Mi Propósito en Montevideo",
+      title: "🏮 Nuestro Propósito en Montevideo",
       items: [
-      { label: "Misión", text: "Traer la cocina filipina y asiática auténtica a Uruguay, desde cero — empezando humilde con take-away y delivery, siempre arraigada en la hospitalidad filipina." },
-      { label: "Visión", text: "Construir Jejori Montevideo como mi propia casa — una marca reconocida por autenticidad y consistencia, nunca un concepto genérico pan-asiático." },
-      { label: "Compromiso", text: "Cada plato firmado por mí. Cada proceso, cada detalle. Soy Analista de Negocios Senior y chef de corazón — y esta mesa es mía." }]
+      { label: "Misión", text: "Traer la cocina filipina y asiática auténtica a Uruguay, en familia — empezando humilde con take-away y delivery, siempre arraigada en la hospitalidad filipina." },
+      { label: "Visión", text: "Expandir Jejori a un segundo país, como una familia — la misma marca, el mismo corazón, ahora en dos casas." },
+      { label: "Compromiso", text: "Cada plato firmado por mí y por mi familia. No es separación de Brasil — es expansión. Brasil sigue con Marjorie; Uruguay sigue con nosotros." }]
     },
-    cta: { tag: "Te invito a probar mi capítulo", title: "Ven a", highlight: "Probar Mi Historia", btn: "Ver Menú" },
-    founderNames: "Jesrae",
-    founderCard: "Jesrae Cudal Laguna — Montevideo, Uruguay"
+    cta: { tag: "Te invito a probar nuestro capítulo", title: "Ven a", highlight: "Probar Nuestra Historia", btn: "Ver Menú" },
+    founderNames: "Jesrae y su familia",
+    founderCard: "Jesrae Cudal Laguna y la familia — Montevideo, Uruguay"
   },
 
   en: {
     heroTag: "Montevideo, Uruguay",
-    heroSub: "A new chapter. The same Filipino heart. My own house in Uruguay.",
+    heroSub: "A new chapter. The same Filipino heart. My whole family, in a new home — Uruguay.",
     identity: {
-      title: "🇵🇭 My Own Chapter",
+      title: "🇵🇭 My Story — and My Family",
       body: [
-      "Jejori was born in Brazil. But this page is mine.",
-      "I'm Jesrae. Filipino with Japanese descent. I handed the Jejori Asian Haus of Brazil to Marjorie — because the kitchen of that country belongs in her hands. And I followed a different calling: to build my own house, from scratch, in Montevideo.",
-      "This is not a branch of Brazil. It is a new beginning — the same Filipino root, but my own story, my own table, my own name."]
+      "Let me tell you a story. My story.",
+      "I'm Jesrae. Filipino with Japanese descent, Senior Business Analyst by day and chef at heart always. Jejori was born in Brazil, from my hands and Marjorie's. It grew, became two addresses, became a family.",
+      "When the time came for the next chapter, I didn't go alone. I brought my whole family with me — my mom, my dad, my brother and my sister. A Filipino household moves together. And in Montevideo we are planting our own table.",
+      "It wasn't separation. It was <strong>EXPANSION</strong>. Brazil stays strong, in Marjorie's hands and her family's. Uruguay is our new home — the same root, two families, one table that only grows."]
     },
     kamayan: {
       title: "🔥 A Chef at Heart",
-      body: "They say I'm a Senior Business Analyst who travels and eats food. But the truth is different. <strong>I am a chef at heart.</strong> The spreadsheet and the broth, the report and the knife — for me, they were never separate worlds. Every country I lived in became a kitchen inside me. Cooking is not what I do after work. It is the work. It is who I am. And now, in Montevideo, it is also my own restaurant."
+      body: "They say I'm a Senior Business Analyst who travels and eats food. But the truth is different. <strong>I am a chef at heart.</strong> The spreadsheet and the broth, the report and the knife — for me, they were never separate worlds. Every country I lived in became a kitchen inside me. Cooking is not what I do after work. It is the work. It is who I am. And now, in Montevideo, with my family beside me, it is also our own restaurant."
     },
     story: {
       title: "🌏 My Journey",
-      jesrae: "<strong>Jesrae Cudal Laguna</strong> — Filipino with Japanese descent. Senior Business Analyst by day, chef at heart always. Singapore taught me the street. Brazil taught me family. Now Uruguay teaches me to start over — on my own, with my own table, bringing dim sum and the Filipino soul to a country that does not yet know them the way I carry them."
+      jesrae: "<strong>Jesrae Cudal Laguna</strong> — Filipino with Japanese descent. Senior Business Analyst by day, chef at heart always. Singapore taught me the street. Brazil taught me to build together. Now Uruguay teaches me to start over — not alone, but with my whole family beside me: my mom, my dad, my brother and my sister. Together we carry dim sum and the Filipino soul to a country that does not yet know them the way we carry them."
     },
     anchors: {
       title: "🧭 My Anchors",
@@ -353,38 +360,40 @@ export const uruguaiContent = {
       { emoji: "🇵🇭", label: "Philippines — The Root", desc: "Hospitality, shared table, community. Where I come from, no matter where I go." },
       { emoji: "🇯🇵", label: "Japanese Heritage", desc: "Precision, respect for technique, care in every detail — in every process, in every dish." },
       { emoji: "🇸🇬", label: "Singapore", desc: "Where I lived the street, the markets, the life. The source of my obsession with authentic Asian food." },
-      { emoji: "🇺🇾", label: "Uruguay — The New Home", desc: "Montevideo. Where I start from scratch, humble and honest, with my own kitchen." }]
+      { emoji: "👨‍👩‍👧‍👦", label: "My Family", desc: "Mom, dad, brother and sister. They came with me to Montevideo. A Filipino household moves together." },
+      { emoji: "🇺🇾", label: "Uruguay — The New Home", desc: "Montevideo. Where we plant our own table, humble and honest, from scratch." }]
     },
     journey: {
       title: "My Journey",
       stops: [
       { place: "Philippines", desc: "Where it all began. A family, a table, an identity that would travel with me across the world." },
       { place: "Singapore", desc: "The street shaped me. Markets, local kitchens, the vibrant life of Asian gastronomy — food as culture, not as event." },
-      { place: "Brazil — with Marjorie", desc: "Jejori was born of the two of us. We built Jejori Asian Haus together in Southern Brazil." },
-      { place: "The Handover", desc: "I handed Jejori of Brazil to Marjorie. The kitchen of that country belongs to her. I needed my own chapter." },
-      { place: "Montevideo, Uruguay", desc: "My own house. I start with take-away and delivery — humble, honest, from scratch. The same Filipino soul, now on Uruguayan soil." }]
+      { place: "Brazil — with Marjorie", desc: "Jejori was born of the two of us. It grew into two addresses in Southern Brazil. Today it's Marjorie and her family who hold that house." },
+      { place: "The Expansion", desc: "It wasn't a farewell. It was expansion. Brazil stayed strong with Marjorie; I left with my family — mom, dad, brother, sister — to plant the next table." },
+      { place: "Montevideo, Uruguay", desc: "Our new home. We arrived as a family, we start with take-away and delivery — humble, honest, from scratch. The same Filipino soul, now on Uruguayan soil." }]
     },
     together: {
-      title: "🇺🇾 Why Uruguay",
-      body: "Why Montevideo? Because this is where I want to prove I am more than a résumé. A Filipino family, a table of my own, in a country that does not yet know dim sum the way I carry it. <em>Take-away and delivery at first</em> — humble, honest, from scratch. Without the luxury of dine-in, but with every intention of getting there.",
-      jesrae: "The kitchen, the operation, and the soul of Jejori Montevideo — all signed by me, from scratch."
+      title: "🇺🇾 An Expansion, Not a Separation",
+      body: "Brazil was not left behind. The two Jejori restaurants in Brazil stay strong — now in the hands of Marjorie and her family, who care for that house with the same heart. And me? I brought my whole family — my mom, my dad, my brother and my sister — to Montevideo. <em>Take-away and delivery at first</em>, humble and honest, from scratch. We did not split apart. We are the same Filipino family, now in two homes, in two countries, one table that only grows.",
+      jesrae: "Jejori Montevideo — the kitchen, the operation and the soul, signed by me and by my family.",
+      marjorie: "Jejori Brazil — the two addresses, in the care of Marjorie and her family."
     },
     nameChange: {
       title: "✨ From Dimsum Haus to Asian Haus",
       body: [
       "We started as <strong>Jejori Dimsum Haus</strong> — dim sum was the personal favorite, shaped by years of experience in Hong Kong and a genuine love for this dish.",
       "But limiting the name to a single dish would be <em>underselling who we truly are</em>. We are Filipino. We carry a rich cultural identity connected to all of Asia.",
-      "And so <strong>Jejori Asian Haus</strong> was born: a Filipino family serving Asian favorites with dim sum at the heart, no borders on the menu. The same name, now in Montevideo — my own page."]
+      "And so <strong>Jejori Asian Haus</strong> was born: a Filipino family serving Asian favorites with dim sum at the heart, no borders on the menu. The same name, now in two homes — Brazil and Uruguay."]
     },
     pillars: {
-      title: "🏮 My Purpose in Montevideo",
+      title: "🏮 Our Purpose in Montevideo",
       items: [
-      { label: "Mission", text: "Bring authentic Filipino and Asian cuisine to Uruguay, from scratch — starting humble with take-away and delivery, always rooted in Filipino hospitality." },
-      { label: "Vision", text: "Build Jejori Montevideo as my own house — a brand recognized for authenticity and consistency, never a generic pan-Asian concept." },
-      { label: "Commitment", text: "Every dish signed by me. Every process, every detail. I am a Senior Business Analyst and a chef at heart — and this table is mine." }]
+      { label: "Mission", text: "Bring authentic Filipino and Asian cuisine to Uruguay, as a family — starting humble with take-away and delivery, always rooted in Filipino hospitality." },
+      { label: "Vision", text: "Expand Jejori into a second country, as a family — the same brand, the same heart, now in two homes." },
+      { label: "Commitment", text: "Every dish signed by me and by my family. It is not separation from Brazil — it is expansion. Brazil stays with Marjorie; Uruguay stays with us." }]
     },
-    cta: { tag: "I invite you to taste my chapter", title: "Come", highlight: "Taste My Story", btn: "View Menu" },
-    founderNames: "Jesrae",
-    founderCard: "Jesrae Cudal Laguna — Montevideo, Uruguay"
+    cta: { tag: "I invite you to taste our chapter", title: "Come", highlight: "Taste Our Story", btn: "View Menu" },
+    founderNames: "Jesrae & his family",
+    founderCard: "Jesrae Cudal Laguna and the family — Montevideo, Uruguay"
   }
 };
