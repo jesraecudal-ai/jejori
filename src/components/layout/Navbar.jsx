@@ -40,6 +40,9 @@ export default function Navbar() {
   const contactLink = isUruguai ? "/uruguai" : "/reserve";
   const contactLabel = isUruguai ? "Contacto" : "Contato";
 
+  const opFlag = isUruguai ? "🇺🇾" : "🇧🇷";
+  const opLabel = isUruguai ? "Montevideo, Uruguay" : op.shortName || op.name;
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -63,7 +66,8 @@ export default function Navbar() {
             className="hidden lg:flex items-center gap-1.5 text-[#D4AF37]/60 hover:text-gold text-[10px] font-sans font-semibold tracking-widest uppercase transition-colors"
           >
             <ArrowLeftRight size={11} />
-            {op.shortName || op.name}
+            <span className="leading-none">{opFlag}</span>
+            {opLabel}
           </button>
         </div>
 
@@ -140,7 +144,8 @@ export default function Navbar() {
                 className="flex items-center gap-2 text-[#D4AF37]/70 hover:text-gold text-xs font-sans font-semibold tracking-widest uppercase mt-3"
               >
                 <ArrowLeftRight size={12} />
-                Trocar operação ({op.shortName || op.name})
+                <span className="leading-none">{opFlag}</span>
+                Trocar operação ({opLabel})
               </button>
             </div>
           </motion.div>
