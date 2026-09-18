@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronRight, MapPin, Clock } from "lucide-react";
@@ -6,7 +6,7 @@ import { operations } from "@/data/operations";
 import { useOperation } from "@/lib/OperationContext";
 
 // Flat list of every branch to display as cards.
-const branches = [
+const allBranches = [
   { ...operations.brasil.locations[0], operationKey: "brasil", cardImage: operations.brasil.locations[0].cardImage || operations.brasil.cardImage },
   { ...operations.brasil.locations[1], operationKey: "brasil", cardImage: operations.brasil.locations[1].cardImage || operations.brasil.cardImage },
   {
@@ -24,9 +24,19 @@ const branches = [
   },
 ];
 
+// Map an ISO country code to an operation key.
+const countryToOperation = (code) => {
+  if (!code) return null;
+  const c = code.toUpperCase();
+  if (c === "BR") return "brasil";
+  if (c === "UY") return "uruguai";
+  return null;
+};
+
 export default function OperationSelector() {
   const navigate = useNavigate();
   const { setOperation } = useOperation();
+  const [branches, setBranches] = useState(allBranches);
 
   const choose = (branch) => {
     setOperation(branch.operationKey);
@@ -38,6 +48,27 @@ export default function OperationSelector() {
     document.body.style.overflow = "auto";
     return () => {
       document.body.style.overflow = prev;
+    };
+  }, []);
+
+  // Detect visitor country via IP geolocation and surface their local branch first.
+  useEffect(() => {
+    let cancelled = false;
+    fetch("https://ipapi.co/json/")
+      .then((res) => res.json())
+      .then((data) => {
+        if (cancelled) return;
+        const opKey = countryToOperation(data?.country_code);
+        if (!opKey) return;
+        setBranches((prev) => {
+          const local = prev.filter((b) => b.operationKey === opKey);
+          const rest = prev.filter((b) => b.operationKey !== opKey);
+          return [...local, ...rest];
+        });
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
     };
   }, []);
 
