@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { MapPin, Clock, Instagram, Phone, ArrowLeftRight } from "lucide-react";
 import { useOperation } from "@/lib/OperationContext";
 import { operations } from "@/data/operations";
+import BlurredAddress from "@/components/shared/BlurredAddress";
 
 export default function Footer() {
   const { operation } = useOperation();
@@ -42,7 +43,11 @@ export default function Footer() {
                   <MapPin size={16} className="text-gold mt-1 shrink-0" />
                   <div>
                     <p className="text-[#F2F2F2]/80 text-sm font-sans font-medium">Montevideo</p>
-                    <p className="text-[#D4AF37]/70 text-xs font-sans mt-1 inline-block border border-[#D4AF37]/30 px-2 py-0.5 rounded-sm tracking-widest uppercase">
+                    <BlurredAddress
+                      address={op.address}
+                      className="text-[#F2F2F2]/45 text-xs font-sans mt-1 block"
+                    />
+                    <p className="text-[#D4AF37]/70 text-xs font-sans mt-2 inline-block border border-[#D4AF37]/30 px-2 py-0.5 rounded-sm tracking-widest uppercase">
                       ✦ Em Breve / Próximamente
                     </p>
                   </div>
@@ -71,9 +76,17 @@ export default function Footer() {
             <h4 className="font-serif text-lg text-gold mb-4">{op.footerHoursTitle}</h4>
             <div className="space-y-4">
               {isUruguai ? (
-                <span className="inline-block bg-[#D4AF37]/10 border border-[#D4AF37]/25 text-gold text-[10px] font-sans font-bold tracking-widest uppercase px-3 py-1 rounded-sm animate-pulse">
-                  ✦ {op.openingNote}
-                </span>
+                <div className="space-y-3">
+                  <span className="inline-block bg-[#D4AF37]/10 border border-[#D4AF37]/25 text-gold text-[10px] font-sans font-bold tracking-widest uppercase px-3 py-1 rounded-sm animate-pulse">
+                    ✦ {op.openingNote}
+                  </span>
+                  <div className="flex items-start gap-2">
+                    <Clock size={14} className="text-gold shrink-0 mt-0.5" />
+                    <p className="text-[#F2F2F2]/60 text-xs font-sans">
+                      {op.hours.map((h) => h).join(" · ")}
+                    </p>
+                  </div>
+                </div>
               ) : (
                 op.locations.map((loc) => (
                   <div key={loc.key}>
