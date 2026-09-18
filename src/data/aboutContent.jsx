@@ -7,10 +7,11 @@ const INTERIOR_IMAGE_BR = "https://media.base44.com/images/public/69f7a7217f4aea
 const HERO_IMAGE_UY = "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/9dc10e0eb_jejoriuruguay.jpg";
 const INTERIOR_IMAGE_UY = "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/e4b6fa32a_WhatsAppImage2026-05-03at180310.jpg";
 const FOUNDERS_PHOTO = "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/5799de77a_WhatsAppImage2026-05-03at180311.jpg";
+const UY_FAMILY_PHOTO = "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/a07f2406b_814493612_122107844409472525_5163511646555266644_n.jpg";
 
 export const aboutImages = {
   brasil: { hero: HERO_IMAGE_BR, interior: INTERIOR_IMAGE_BR, founder: FOUNDERS_PHOTO },
-  uruguai: { hero: HERO_IMAGE_UY, interior: INTERIOR_IMAGE_UY, founder: FOUNDERS_PHOTO },
+  uruguai: { hero: HERO_IMAGE_UY, interior: INTERIOR_IMAGE_UY, founder: UY_FAMILY_PHOTO },
 };
 
 export const brasilContent = {
