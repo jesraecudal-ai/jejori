@@ -11,6 +11,7 @@ export default function InstagramCarousel() {
 
   const [media, setMedia] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [start, setStart] = useState(0);
 
   const PER_VIEW = 4;
@@ -21,16 +22,19 @@ export default function InstagramCarousel() {
       .invoke("instagramFeed", {})
       .then((res) => {
         if (cancelled) return;
-        setMedia(res.data?.media || []);
+        const payload = res?.data ?? res;
+        setMedia(payload?.media || []);
       })
-      .catch(() => {})
+      .catch((err) => {
+        if (!cancelled) setError(err?.message || "failed");
+      })
       .finally(() => !cancelled && setLoading(false));
     return () => {
       cancelled = true;
     };
   }, []);
 
-  if (!loading && media.length === 0) return null;
+  if (!loading && media.length === 0 && !error) return null;
 
   const canPrev = start > 0;
   const canNext = start + PER_VIEW < media.length;
@@ -48,7 +52,11 @@ export default function InstagramCarousel() {
           <div className="flex justify-center py-20">
             <Loader2 className="w-8 h-8 text-gold animate-spin" />
           </div>
-        ) : (
+        ) : error ? (
+          <p className="text-center text-[#F2F2F2]/30 font-sans text-sm py-12">
+            {isUruguai ? "No se pudo cargar el feed de Instagram." : "Não foi possível carregar o feed do Instagram."}
+          </p>
+        ) : media.length === 0 ? null : (
           <>
             <div className="flex items-center justify-between mb-6">
               <a
