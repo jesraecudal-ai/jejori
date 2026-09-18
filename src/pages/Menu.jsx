@@ -43,7 +43,10 @@ export default function Menu({ operationOverride }) {
   const chefsPicks = items.filter((item) => item.tags?.includes("chefs_pick"));
 
   const grouped = {};
-  filtered.forEach((item) => {
+  const ordered = activeCategory === "all"
+    ? [...filtered].sort((a, b) => (a.image_url ? 0 : 1) - (b.image_url ? 0 : 1))
+    : filtered;
+  ordered.forEach((item) => {
     const cat = item.category || "other";
     if (!grouped[cat]) grouped[cat] = [];
     grouped[cat].push(item);
