@@ -15,9 +15,10 @@ function SectionTitle({ children }) {
     </div>);
 }
 
-export default function About() {
+export default function About({ operationOverride }) {
   const { operation } = useOperation();
-  const isUruguai = operation === "uruguai";
+  const activeOp = operationOverride || operation;
+  const isUruguai = activeOp === "uruguai";
   const content = isUruguai ? uruguaiContent : brasilContent;
   const images = aboutImages[isUruguai ? "uruguai" : "brasil"];
 
@@ -238,7 +239,7 @@ export default function About() {
         <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#F2F2F2] mb-8">
           {t.cta.title} <span className="text-gold">{t.cta.highlight}</span>
         </h2>
-        <GoldButton to="/menu">{t.cta.btn}</GoldButton>
+        <GoldButton to={isUruguai ? "/uruguai/menu" : "/brasil/menu"}>{t.cta.btn}</GoldButton>
       </div>
     </div>);
 }

@@ -24,10 +24,10 @@ export default function FinalCTA({ bgImage }) {
           Venha como está. Sem reservas — a noite é sua.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <GoldButton to="/menu" className="animate-pulse-glow">
+          <GoldButton to="/brasil/menu" className="animate-pulse-glow">
             Ver Cardápio
           </GoldButton>
-          <GoldButton to="/about" variant="ghost">
+          <GoldButton to="/brasil/about" variant="ghost">
             Nossa História
           </GoldButton>
         </div>

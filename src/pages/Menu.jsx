@@ -20,12 +20,12 @@ const categoryLabels = {
   rice_snacks: "Snacks de Arroz",
 };
 
-export default function Menu() {
+export default function Menu({ operationOverride }) {
   const [activeCategory, setActiveCategory] = useState("all");
   const [activeFilter, setActiveFilter] = useState(null);
   const [view, setView] = useState("visual");
   const { operation } = useOperation();
-  const op = operations[operation] || operations.brasil;
+  const op = operations[operationOverride || operation] || operations.brasil;
   const isUruguai = op.key === "uruguai";
 
   const { data: items = [], isLoading } = useQuery({
@@ -154,7 +154,7 @@ export default function Menu() {
             Quiero ser avisado
           </GoldButton>
         ) : (
-          <GoldButton to="/about" className="animate-pulse-glow">
+          <GoldButton to="/brasil/about" className="animate-pulse-glow">
             Visite-nos Hoje
           </GoldButton>
         )}

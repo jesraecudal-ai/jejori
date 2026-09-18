@@ -56,7 +56,7 @@ export default function HeroSection({ heroImage }) {
           transition={{ duration: 0.6, delay: 0.9 }}
           className="flex flex-col sm:flex-row gap-4"
         >
-          <GoldButton to="/menu" variant="ghost">
+          <GoldButton to="/brasil/menu" variant="ghost">
             Ver Cardápio
           </GoldButton>
         </motion.div>

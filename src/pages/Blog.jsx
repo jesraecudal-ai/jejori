@@ -7,9 +7,9 @@ import { ArrowRight, Loader2 } from "lucide-react";
 import { useOperation } from "@/lib/OperationContext";
 import { operations } from "@/data/operations";
 
-export default function Blog() {
+export default function Blog({ operationOverride }) {
   const { operation } = useOperation();
-  const op = operations[operation] || operations.brasil;
+  const op = operations[operationOverride || operation] || operations.brasil;
   const isUruguai = op.key === "uruguai";
 
   const { data: posts = [], isLoading } = useQuery({
@@ -68,7 +68,7 @@ export default function Blog() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
                 <Link
-                  to={`/blog/${post.slug || post.id}`}
+                  to={`/${op.key}/blog/${post.slug || post.id}`}
                   className="group block border border-[#D4AF37]/10 rounded-lg overflow-hidden bg-[#0B0B0B]/80 hover:border-gold/30 transition-all duration-500"
                 >
                   {post.cover_image_url && (

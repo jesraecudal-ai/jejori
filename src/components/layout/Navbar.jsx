@@ -5,14 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useOperation } from "@/lib/OperationContext";
 import { operations } from "@/data/operations";
 
-const navLinks = [
-  { label: "Início", path: "/" },
-  { label: "Menu", path: "/menu" },
-  { label: "Blog", path: "/blog" },
-  { label: "Sobre", path: "/about" },
-  { label: "Franquia", path: "/franchise" },
-];
-
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -34,7 +26,7 @@ export default function Navbar() {
   // hide navbar on the selector screen
   if (location.pathname === "/") return null;
 
-  const homePath = op ? `/${op.key}` : "/";
+  const homePath = `/${op.key}`;
   const isUruguai = op.key === "uruguai";
 
   const contactLink = isUruguai ? "/uruguai" : "/reserve";
@@ -42,6 +34,15 @@ export default function Navbar() {
 
   const opFlag = isUruguai ? "🇺🇾" : "🇧🇷";
   const opLabel = isUruguai ? "Montevideo, Uruguay" : op.shortName || op.name;
+
+  const navLinks = [
+    { label: "Menu", path: `/${op.key}/menu` },
+    { label: "Blog", path: `/${op.key}/blog` },
+    { label: "Sobre", path: `/${op.key}/about` },
+    { label: "Franquia", path: `/${op.key}/franchise` },
+  ];
+
+  const isActive = (path) => location.pathname === path || location.pathname.startsWith(`${path}/`);
 
   return (
     <nav
@@ -79,12 +80,12 @@ export default function Navbar() {
           >
             Início
           </Link>
-          {navLinks.slice(1).map((link) => (
+          {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
               className={`text-sm font-sans font-medium tracking-widest uppercase transition-colors duration-300 ${
-                location.pathname === link.path
+                isActive(link.path)
                   ? "text-gold"
                   : "text-[#F2F2F2]/70 hover:text-gold"
               }`}
@@ -122,12 +123,12 @@ export default function Navbar() {
               <Link to={homePath} className="text-lg font-serif tracking-wider text-gold">
                 Início
               </Link>
-              {navLinks.slice(1).map((link) => (
+              {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   className={`text-lg font-serif tracking-wider transition-colors duration-300 ${
-                    location.pathname === link.path ? "text-gold" : "text-[#F2F2F2]/70"
+                    isActive(link.path) ? "text-gold" : "text-[#F2F2F2]/70"
                   }`}
                 >
                   {link.label}

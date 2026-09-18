@@ -134,7 +134,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Jejori. Todos os direitos reservados.
           </p>
           <div className="flex gap-6">
-            {[{ label: "Início", path: op.key ? `/${op.key}` : "/" }, { label: "Menu", path: "/menu" }, { label: "Sobre", path: "/about" }, { label: "Franquia", path: "/franchise" }].map((item) => (
+            {[{ label: "Início", path: op.key ? `/${op.key}` : "/" }, { label: "Menu", path: `/${op.key}/menu` }, { label: "Sobre", path: `/${op.key}/about` }, { label: "Franquia", path: `/${op.key}/franchise` }].map((item) => (
               <Link
                 key={item.label}
                 to={item.path}

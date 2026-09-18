@@ -7,9 +7,9 @@ import { ArrowLeft, Loader2 } from "lucide-react";
 import { useOperation } from "@/lib/OperationContext";
 import { operations } from "@/data/operations";
 
-export default function BlogPost() {
+export default function BlogPost({ operationOverride }) {
   const { operation } = useOperation();
-  const op = operations[operation] || operations.brasil;
+  const op = operations[operationOverride || operation] || operations.brasil;
   const slug = window.location.pathname.split("/blog/")[1];
 
   const { data: posts = [], isLoading } = useQuery({
@@ -36,7 +36,7 @@ export default function BlogPost() {
     return (
       <div className="min-h-screen bg-[#0B0B0B] pt-32 text-center px-6">
         <h1 className="font-serif text-3xl text-gold mb-4">Post Not Found</h1>
-        <Link to="/blog" className="text-gold font-sans text-sm hover:underline">
+        <Link to={`/${op.key}/blog`} className="text-gold font-sans text-sm hover:underline">
           ← Back to Journal
         </Link>
       </div>
@@ -47,7 +47,7 @@ export default function BlogPost() {
     <div className="min-h-screen bg-[#0B0B0B] pt-24">
       <div className="max-w-3xl mx-auto px-6 pb-24">
         <Link
-          to="/blog"
+          to={`/${op.key}/blog`}
           className="inline-flex items-center gap-2 text-gold/60 hover:text-gold text-sm font-sans mb-8 transition-colors"
         >
           <ArrowLeft size={14} /> Back to Journal

@@ -8,6 +8,7 @@ import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import { OperationProvider } from '@/lib/OperationContext';
 
 import Layout from './components/layout/Layout';
+import CountryRoute from '@/components/CountryRoute';
 import OperationSelector from './pages/OperationSelector';
 import BrazilLanding from './pages/BrazilLanding';
 import UruguayLanding from './pages/UruguayLanding';
@@ -44,6 +45,16 @@ const AuthenticatedApp = () => {
       <Route element={<Layout />}>
         <Route path="/brasil" element={<BrazilLanding />} />
         <Route path="/uruguai" element={<UruguayLanding />} />
+        <Route path="/brasil/menu" element={<CountryRoute country="brasil"><Menu operationOverride="brasil" /></CountryRoute>} />
+        <Route path="/brasil/blog" element={<CountryRoute country="brasil"><Blog operationOverride="brasil" /></CountryRoute>} />
+        <Route path="/brasil/blog/:slug" element={<CountryRoute country="brasil"><BlogPostPage operationOverride="brasil" /></CountryRoute>} />
+        <Route path="/brasil/about" element={<CountryRoute country="brasil"><About operationOverride="brasil" /></CountryRoute>} />
+        <Route path="/brasil/franchise" element={<CountryRoute country="brasil"><Franchise operationOverride="brasil" /></CountryRoute>} />
+        <Route path="/uruguai/menu" element={<CountryRoute country="uruguai"><Menu operationOverride="uruguai" /></CountryRoute>} />
+        <Route path="/uruguai/blog" element={<CountryRoute country="uruguai"><Blog operationOverride="uruguai" /></CountryRoute>} />
+        <Route path="/uruguai/blog/:slug" element={<CountryRoute country="uruguai"><BlogPostPage operationOverride="uruguai" /></CountryRoute>} />
+        <Route path="/uruguai/about" element={<CountryRoute country="uruguai"><About operationOverride="uruguai" /></CountryRoute>} />
+        <Route path="/uruguai/franchise" element={<CountryRoute country="uruguai"><Franchise operationOverride="uruguai" /></CountryRoute>} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />

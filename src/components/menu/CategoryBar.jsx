@@ -1,24 +1,50 @@
 import React from "react";
+import { useOperation } from "@/lib/OperationContext";
 
-const categories = [
-  { key: "all", label: "Todos" },
-  { key: "dumplings", label: "Dumplings" },
-  { key: "spring_rolls", label: "Spring Rolls" },
-  { key: "buns_rice", label: "Pães & Arroz" },
-  { key: "soups", label: "Sopas" },
-  { key: "noodles", label: "Macarrão" },
-  { key: "chicken", label: "Frango" },
-  { key: "rice_snacks", label: "Snacks de Arroz" },
-];
+const labelSets = {
+  brasil: {
+    categories: [
+      { key: "all", label: "Todos" },
+      { key: "dumplings", label: "Dumplings" },
+      { key: "spring_rolls", label: "Spring Rolls" },
+      { key: "buns_rice", label: "Pães & Arroz" },
+      { key: "soups", label: "Sopas" },
+      { key: "noodles", label: "Macarrão" },
+      { key: "chicken", label: "Frango" },
+      { key: "rice_snacks", label: "Snacks de Arroz" },
+    ],
+    filters: [
+      { key: "popular", label: "Popular" },
+      { key: "spicy", label: "Apimentado" },
+      { key: "new", label: "Novo" },
+      { key: "chefs_pick", label: "Escolha do Chef" },
+    ],
+  },
+  uruguai: {
+    categories: [
+      { key: "all", label: "Todos" },
+      { key: "dumplings", label: "Dumplings" },
+      { key: "spring_rolls", label: "Spring Rolls" },
+      { key: "buns_rice", label: "Panes y Arroz" },
+      { key: "soups", label: "Sopas" },
+      { key: "noodles", label: "Fideos" },
+      { key: "chicken", label: "Pollo" },
+      { key: "rice_snacks", label: "Snacks de Arroz" },
+    ],
+    filters: [
+      { key: "popular", label: "Popular" },
+      { key: "spicy", label: "Picante" },
+      { key: "new", label: "Nuevo" },
+      { key: "chefs_pick", label: "Elección del Chef" },
+    ],
+  },
+};
 
-const filters = [
-  { key: "popular", label: "Popular" },
-  { key: "spicy", label: "Apimentado" },
-  { key: "new", label: "Novo" },
-  { key: "chefs_pick", label: "Escolha do Chef" },
-];
-
-export default function CategoryBar({ activeCategory, setActiveCategory, activeFilter, setActiveFilter }) {
+export default function CategoryBar({ activeCategory, setActiveCategory, activeFilter, setActiveFilter, operationOverride }) {
+  const { operation } = useOperation();
+  const labels = labelSets[operationOverride || operation] || labelSets.brasil;
+  const categories = labels.categories;
+  const filters = labels.filters;
   return (
     <div className="sticky top-[72px] z-30 bg-[#0B0B0B]/95 backdrop-blur-md border-b border-[#D4AF37]/10 py-4">
       <div className="max-w-7xl mx-auto px-6">

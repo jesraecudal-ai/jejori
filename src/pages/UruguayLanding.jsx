@@ -220,7 +220,7 @@ export default function UruguayLanding() {
 
       {/* Preview CTA to menu/blog */}
       <div className="py-16 px-6 text-center border-t border-[#D4AF37]/10">
-        <GoldButton to="/menu" variant="ghost">
+        <GoldButton to="/uruguai/menu" variant="ghost">
           Ver Menú
         </GoldButton>
       </div>
