@@ -142,6 +142,17 @@ export default function About({ operationOverride }) {
           </div>
         </motion.div>
 
+        {images.founders && (
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-center">
+            <div className="relative inline-block">
+              <img
+                src={images.founders}
+                alt="Jesrae & Marjorie"
+                className="w-full max-w-xl mx-auto rounded-lg object-cover border border-[#D4AF37]/20" />
+            </div>
+          </motion.div>
+        )}
+
         {/* Journey Timeline */}
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
           <SectionTitle>{t.journey.title}</SectionTitle>

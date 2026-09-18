@@ -11,7 +11,7 @@ const UY_FAMILY_PHOTO = "https://media.base44.com/images/public/69f7a7217f4aea93
 
 export const aboutImages = {
   brasil: { hero: HERO_IMAGE_BR, interior: INTERIOR_IMAGE_BR, founder: FOUNDERS_PHOTO },
-  uruguai: { hero: HERO_IMAGE_UY, interior: INTERIOR_IMAGE_UY, founder: UY_FAMILY_PHOTO },
+  uruguai: { hero: HERO_IMAGE_UY, interior: INTERIOR_IMAGE_UY, founder: UY_FAMILY_PHOTO, founders: FOUNDERS_PHOTO },
 };
 
 export const brasilContent = {
