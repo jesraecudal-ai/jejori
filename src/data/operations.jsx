@@ -54,6 +54,8 @@ export const operations = {
     tagline: "Próximamente · Em Breve",
     city: "Montevideo, Uruguay",
     cities: "Montevideo · Uruguay",
+    address: "Av. Uruguay 1453 y Dr. Javier Barrios Amorín",
+    hours: ["11:00 – 23:00"],
     upcoming: true,
     openingNote: "Próximamente — fecha por confirmar",
     cardImage:

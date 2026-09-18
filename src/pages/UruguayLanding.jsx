@@ -4,7 +4,8 @@ import { base44 } from "@/api/base44Client";
 import { useOperation } from "@/lib/OperationContext";
 import { operations } from "@/data/operations";
 import GoldButton from "@/components/shared/GoldButton";
-import { Loader2, CheckCircle, MapPin } from "lucide-react";
+import BlurredAddress from "@/components/shared/BlurredAddress";
+import { Loader2, CheckCircle, MapPin, Clock } from "lucide-react";
 
 const op = operations.uruguai;
 
@@ -202,9 +203,19 @@ export default function UruguayLanding() {
       {/* City */}
       <section className="py-20 px-6 text-center">
         <MapPin className="w-6 h-6 text-gold mx-auto mb-3" />
-        <p className="text-[#F2F2F2]/50 font-sans text-sm tracking-widest uppercase">
+        <p className="text-[#F2F2F2]/50 font-sans text-sm tracking-widest uppercase mb-4">
           {op.city}
         </p>
+        <div className="max-w-md mx-auto space-y-2">
+          <BlurredAddress
+            address={op.address}
+            className="text-[#F2F2F2]/70 font-sans text-base"
+          />
+          <div className="flex items-center justify-center gap-2 text-gold/80 font-sans text-sm">
+            <Clock size={14} />
+            <span>11:00 – 23:00</span>
+          </div>
+        </div>
       </section>
 
       {/* Preview CTA to menu/blog */}

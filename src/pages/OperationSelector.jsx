@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ChevronRight, MapPin, Clock } from "lucide-react";
 import { operations } from "@/data/operations";
 import { useOperation } from "@/lib/OperationContext";
+import BlurredAddress from "@/components/shared/BlurredAddress";
 
 // Flat list of every branch to display as cards.
 const allBranches = [
@@ -14,12 +15,13 @@ const allBranches = [
     name: "Montevideo",
     short: "Montevideo",
     address: "Uruguay",
-    fullAddress: "Montevideo, Uruguay",
-    hours: [],
+    fullAddress: operations.uruguai.address,
+    hours: operations.uruguai.hours,
     badge: "Próximamente",
     operationKey: "uruguai",
     cardImage: operations.uruguai.cardImage,
     upcoming: true,
+    blurNumber: true,
     openingNote: operations.uruguai.openingNote,
   },
 ];
@@ -139,20 +141,23 @@ export default function OperationSelector() {
                 <div className="space-y-2 mb-5 flex-1">
                   <div className="flex items-start gap-2 text-[#F2F2F2]/55 text-sm font-sans">
                     <MapPin size={14} className="text-gold shrink-0 mt-0.5" />
-                    {branch.fullAddress}
+                    {branch.blurNumber ? (
+                      <BlurredAddress address={branch.fullAddress} />
+                    ) : (
+                      branch.fullAddress
+                    )}
                   </div>
-                  {branch.upcoming ? (
+                  {branch.upcoming && (
                     <p className="text-gold/70 text-xs font-sans font-semibold tracking-widest uppercase">
                       {branch.openingNote}
                     </p>
-                  ) : (
-                    branch.hours.map((h) => (
-                      <div key={h} className="flex items-start gap-2 text-[#F2F2F2]/50 text-xs font-sans">
-                        <Clock size={14} className="text-gold shrink-0 mt-0.5" />
-                        {h}
-                      </div>
-                    ))
                   )}
+                  {branch.hours.map((h) => (
+                    <div key={h} className="flex items-start gap-2 text-[#F2F2F2]/50 text-xs font-sans">
+                      <Clock size={14} className="text-gold shrink-0 mt-0.5" />
+                      {h}
+                    </div>
+                  ))}
                 </div>
 
                 <div className="inline-flex items-center gap-2 text-gold font-sans text-sm font-semibold tracking-widest uppercase group-hover:gap-3 transition-all">
