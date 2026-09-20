@@ -19,7 +19,7 @@ const allBranches = [
     hours: operations.uruguai.hours,
     badge: "Próximamente",
     operationKey: "uruguai",
-    cardImage: "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/0a11d919e_montevide.png",
+    cardImage: "https://media.base44.com/images/public/69f7a7217f4aea931ae30c1c/94a6475f8_motnevideo.jpg",
     upcoming: true,
     blurNumber: true,
     openingNote: operations.uruguai.openingNote,
