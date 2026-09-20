@@ -15,10 +15,22 @@ const tagLabels = {
   chefs_pick: "Escolha do Chef",
 };
 
-export default function MenuCard({ item, index, view = "visual" }) {
+export default function MenuCard({ item, index, view = "visual", isUruguai = false, usdRate = null }) {
+  const usdFromUyu = (uyu) => (usdRate && uyu ? (uyu * usdRate).toFixed(2) : null);
   const priceDisplay = item.price
-    ? `R$ ${item.price.toFixed(2)}`
+    ? isUruguai
+      ? `$U ${item.price.toFixed(0)}${usdFromUyu(item.price) ? ` · ≈ US$ ${usdFromUyu(item.price)}` : ""}`
+      : `R$ ${item.price.toFixed(2)}`
     : item.variants?.[0]?.split(" - ")[1] || "—";
+
+  // Uruguay variants embed the peso price (e.g. "3 pcs - 19.9"); append a live USD equiv.
+  const fmtVariant = (v) => {
+    if (!isUruguai || !usdRate) return v;
+    const m = v.match(/^(.*?)\s*-\s*([\d.]+)$/);
+    if (!m) return v;
+    const usd = (parseFloat(m[2]) * usdRate).toFixed(2);
+    return `${v} · ≈ US$ ${usd}`;
+  };
 
   if (view === "minimal") {
     return (
@@ -49,7 +61,7 @@ export default function MenuCard({ item, index, view = "visual" }) {
               <div className="flex flex-wrap gap-2 mt-2">
                 {item.variants.map((v) => (
                   <span key={v} className="text-[#F2F2F2]/50 text-xs font-sans border border-[#D4AF37]/15 px-2 py-0.5 rounded-sm">
-                    {v}
+                    {fmtVariant(v)}
                   </span>
                 ))}
               </div>
@@ -129,13 +141,17 @@ export default function MenuCard({ item, index, view = "visual" }) {
           <div className="flex flex-wrap gap-1.5 mt-auto">
             {item.variants.map((v) => (
               <span key={v} className="text-[#F2F2F2]/60 text-xs font-sans border border-[#D4AF37]/20 px-2 py-1 rounded-sm">
-                {v}
+                {fmtVariant(v)}
               </span>
             ))}
           </div>
         ) : (
           <span className="font-sans font-bold text-gold text-lg mt-auto">
-            R$ {item.price?.toFixed(2) || "—"}
+            {item.price
+              ? isUruguai
+                ? `$U ${item.price.toFixed(0)}${usdFromUyu(item.price) ? ` · ≈ US$ ${usdFromUyu(item.price)}` : ""}`
+                : `R$ ${item.price.toFixed(2)}`
+              : "—"}
           </span>
         )}
 

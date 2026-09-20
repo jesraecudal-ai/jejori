@@ -33,6 +33,15 @@ export default function Menu({ operationOverride }) {
     queryFn: () => base44.entities.MenuItem.filter({ operation: op.key, is_available: true }, "sort_order", 200),
   });
 
+  // Uruguay menu prices are stored in pesos; fetch a live UYU->USD rate once.
+  const { data: fx } = useQuery({
+    queryKey: ["fxUyuUsd"],
+    queryFn: async () => (await base44.functions.invoke("fxUyuUsd")).data,
+    enabled: isUruguai,
+    staleTime: 1000 * 60 * 60, // 1 hour
+  });
+  const usdRate = isUruguai && fx?.rate ? fx.rate : null;
+
   const filtered = items.filter((item) => {
     if (!item.is_available && item.is_available !== undefined) return false;
     const catMatch = activeCategory === "all" || item.category === activeCategory;
@@ -117,7 +126,7 @@ export default function Menu({ operationOverride }) {
                 </div>
                 <div className={view === "visual" ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" : ""}>
                   {chefsPicks.map((item, i) => (
-                    <MenuCard key={item.id} item={item} index={i} view={view} />
+                    <MenuCard key={item.id} item={item} index={i} view={view} isUruguai={isUruguai} usdRate={usdRate} />
                   ))}
                 </div>
               </div>
@@ -133,7 +142,7 @@ export default function Menu({ operationOverride }) {
                 </div>
                 <div className={view === "visual" ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" : ""}>
                   {catItems.map((item, i) => (
-                    <MenuCard key={item.id} item={item} index={i} view={view} />
+                    <MenuCard key={item.id} item={item} index={i} view={view} isUruguai={isUruguai} usdRate={usdRate} />
                   ))}
                 </div>
               </div>
