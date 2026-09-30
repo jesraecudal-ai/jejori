@@ -140,12 +140,16 @@ export default function OperationSelector() {
       <div className="relative z-10 flex-1 px-6 pb-16">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {branches.map((branch, i) => (
-            <motion.button
+            <motion.a
+              href={`/${branch.operationKey}`}
               key={branch.key}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.12 }}
-              onClick={() => choose(branch)}
+              onClick={(e) => {
+                e.preventDefault();
+                choose(branch);
+              }}
               className={`group relative flex flex-col text-left rounded-xl overflow-hidden border transition-all duration-500 ${
                 branch.upcoming
                   ? "border-[#D4AF37]/20 grayscale-[0.25] hover:grayscale-0"
@@ -203,7 +207,7 @@ export default function OperationSelector() {
                   <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
-            </motion.button>
+            </motion.a>
           ))}
         </div>
       </div>
