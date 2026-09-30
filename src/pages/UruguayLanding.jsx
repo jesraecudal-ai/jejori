@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { base44 } from "@/api/base44Client";
 import { useOperation } from "@/lib/OperationContext";
+import { setMeta } from "@/lib/seo";
 import { operations } from "@/data/operations";
 import GoldButton from "@/components/shared/GoldButton";
 import BlurredAddress from "@/components/shared/BlurredAddress";
@@ -16,6 +17,10 @@ export default function UruguayLanding() {
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
+    setMeta(
+      "Jejori Asian Haus Montevideo — Próximamente en Uruguay",
+      "Jejori Asian Haus Montevideo — cocina filipina y asiática auténtica, próximamente en Uruguay. Anotate para ser avisado de la apertura."
+    );
     setOperation("uruguai");
   }, [setOperation]);
 

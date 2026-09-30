@@ -5,6 +5,7 @@ import { ChevronRight, MapPin, Clock } from "lucide-react";
 import { operations } from "@/data/operations";
 import { useOperation } from "@/lib/OperationContext";
 import BlurredAddress from "@/components/shared/BlurredAddress";
+import { setMeta } from "@/lib/seo";
 
 // Flat list of every branch to display as cards.
 const allBranches = [
@@ -67,6 +68,10 @@ export default function OperationSelector() {
   const choose = (branch) => go(branch.operationKey);
 
   useEffect(() => {
+    setMeta(
+      "Jejori Asian Haus — Brasil & Uruguai",
+      "Jejori Asian Haus — cozinha filipina e asiática autêntica. Brasil (Gravataí & Porto Alegre) e Uruguai (Montevideo, em breve)."
+    );
     const prev = document.body.style.overflow;
     document.body.style.overflow = "auto";
     return () => {
