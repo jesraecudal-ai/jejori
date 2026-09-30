@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronRight, MapPin, Clock } from "lucide-react";
@@ -35,15 +35,36 @@ const countryToOperation = (code) => {
   return null;
 };
 
+// Remember a visitor's branch for 30 days so repeat visits skip detection.
+const OP_COOKIE = "jejori_op";
+const FLASH_MS = 2000;
+const readOpCookie = () => {
+  const m = document.cookie.match(new RegExp("(?:^|; )" + OP_COOKIE + "=([^;]*)"));
+  const v = m ? decodeURIComponent(m[1]) : null;
+  return v === "brasil" || v === "uruguai" ? v : null;
+};
+const writeOpCookie = (op) => {
+  const expires = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString();
+  document.cookie = `${OP_COOKIE}=${op}; expires=${expires}; path=/; SameSite=Lax`;
+};
+
 export default function OperationSelector() {
   const navigate = useNavigate();
   const { setOperation } = useOperation();
-  const [branches, setBranches] = useState(allBranches);
+  const timerRef = useRef(null);
+  const branches = allBranches;
 
-  const choose = (branch) => {
-    setOperation(branch.operationKey);
-    navigate(`/${branch.operationKey}`);
+  const go = (op) => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+    writeOpCookie(op);
+    setOperation(op);
+    navigate(`/${op}`);
   };
+
+  const choose = (branch) => go(branch.operationKey);
 
   useEffect(() => {
     const prev = document.body.style.overflow;
@@ -53,25 +74,37 @@ export default function OperationSelector() {
     };
   }, []);
 
-  // Detect visitor country via IP geolocation and surface their local branch first.
+  // Returning visitors skip straight to their remembered branch; first-timers from
+  // BR/UY see the cards for ~2s then auto-route (clicking a card overrides); anyone
+  // else (other country or failed detection) stays on the cards to pick manually.
   useEffect(() => {
     let cancelled = false;
+
+    const remembered = readOpCookie();
+    if (remembered) {
+      setOperation(remembered);
+      navigate(`/${remembered}`);
+      return;
+    }
+
     fetch("https://ipapi.co/json/")
       .then((res) => res.json())
       .then((data) => {
         if (cancelled) return;
         const opKey = countryToOperation(data?.country_code);
-        if (!opKey) return;
-        setBranches((prev) => {
-          const local = prev.filter((b) => b.operationKey === opKey);
-          const rest = prev.filter((b) => b.operationKey !== opKey);
-          return [...local, ...rest];
-        });
+        if (!opKey) return; // other / unknown country -> keep showing the cards
+        timerRef.current = setTimeout(() => go(opKey), FLASH_MS);
       })
       .catch(() => {});
+
     return () => {
       cancelled = true;
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+        timerRef.current = null;
+      }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
