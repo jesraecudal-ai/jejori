@@ -17,7 +17,10 @@ const tagLabels = {
 
 export default function MenuCard({ item, index, view = "visual", isUruguai = false, usdRate = null }) {
   const usdFromUyu = (uyu) => (usdRate && uyu ? (uyu * usdRate).toFixed(2) : null);
-  const priceDisplay = item.price
+  // Uruguay prices live on PedidosYa / Rappi, so none are shown on the site.
+  const priceDisplay = isUruguai
+    ? null
+    : item.price
     ? isUruguai
       ? `$U ${item.price.toFixed(0)}${usdFromUyu(item.price) ? ` · ≈ US$ ${usdFromUyu(item.price)}` : ""}`
       : `R$ ${item.price.toFixed(2)}`
@@ -25,11 +28,9 @@ export default function MenuCard({ item, index, view = "visual", isUruguai = fal
 
   // Uruguay variants embed the peso price (e.g. "3 pcs - 19.9"); append a live USD equiv.
   const fmtVariant = (v) => {
-    if (!isUruguai || !usdRate) return v;
-    const m = v.match(/^(.*?)\s*-\s*([\d.]+)$/);
-    if (!m) return v;
-    const usd = (parseFloat(m[2]) * usdRate).toFixed(2);
-    return `${v} · ≈ US$ ${usd}`;
+    if (!isUruguai) return v;
+    const m = v.match(/^(.*?)\s*-\s*[\d.]+$/);
+    return m ? m[1] : v;
   };
 
   if (view === "minimal") {
@@ -83,9 +84,11 @@ export default function MenuCard({ item, index, view = "visual", isUruguai = fal
               </div>
             )}
           </div>
-          <span className="font-sans font-bold text-gold text-base whitespace-nowrap shrink-0 mt-1">
-            {priceDisplay}
-          </span>
+          {priceDisplay && (
+            <span className="font-sans font-bold text-gold text-base whitespace-nowrap shrink-0 mt-1">
+              {priceDisplay}
+            </span>
+          )}
         </div>
       </motion.div>
     );
@@ -146,13 +149,11 @@ export default function MenuCard({ item, index, view = "visual", isUruguai = fal
             ))}
           </div>
         ) : (
-          <span className="font-sans font-bold text-gold text-lg mt-auto">
-            {item.price
-              ? isUruguai
-                ? `$U ${item.price.toFixed(0)}${usdFromUyu(item.price) ? ` · ≈ US$ ${usdFromUyu(item.price)}` : ""}`
-                : `R$ ${item.price.toFixed(2)}`
-              : "—"}
-          </span>
+          priceDisplay && (
+            <span className="font-sans font-bold text-gold text-lg mt-auto">
+              {priceDisplay}
+            </span>
+          )
         )}
 
         {item.flavors?.length > 0 && (
