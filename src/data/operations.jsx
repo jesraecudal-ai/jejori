@@ -92,9 +92,9 @@ export const operations = {
       success: "¡ Gracias ! Te avisaremos en cuanto abra.",
     },
     social: {
-      instagram: "https://instagram.com/jejoriasianhaus",
-      tiktok: "https://tiktok.com/@jejoriasianhaus",
-      handle: "@jejoriasianhaus",
+      instagram: "https://instagram.com/jejori_uruguay",
+      tiktok: "https://tiktok.com/@jejori_uruguay",
+      handle: "@jejori_uruguay",
     },
     footerTitle: "Ubicación",
     footerHoursTitle: "Próximamente · fecha por confirmar",
