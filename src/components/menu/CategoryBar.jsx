@@ -12,6 +12,7 @@ const labelSets = {
       { key: "noodles", label: "Macarrão" },
       { key: "chicken", label: "Frango" },
       { key: "rice_snacks", label: "Snacks de Arroz" },
+      { key: "desserts", label: "Sobremesas" },
     ],
     filters: [
       { key: "popular", label: "Popular" },
@@ -30,6 +31,7 @@ const labelSets = {
       { key: "noodles", label: "Fideos" },
       { key: "chicken", label: "Pollo" },
       { key: "rice_snacks", label: "Snacks de Arroz" },
+      { key: "desserts", label: "Postres" },
     ],
     filters: [
       { key: "popular", label: "Popular" },

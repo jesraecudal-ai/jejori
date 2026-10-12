@@ -51,7 +51,8 @@
         "soups",
         "noodles",
         "chicken",
-        "rice_snacks"
+        "rice_snacks",
+        "desserts"
       ],
       "description": "Menu category"
     },

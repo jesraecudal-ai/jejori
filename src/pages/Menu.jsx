@@ -18,6 +18,7 @@ const categoryLabels = {
   noodles: "Macarrão",
   chicken: "Frango",
   rice_snacks: "Snacks de Arroz",
+  desserts: "Sobremesas",
 };
 
 export default function Menu({ operationOverride }) {
@@ -77,6 +78,11 @@ export default function Menu({ operationOverride }) {
             ? "Cada plato cuenta una historia de humo, sazón y alma · Montevideo"
             : "Cada prato conta uma história de fumaça, tempero e alma"}
         </p>
+        {isUruguai && (
+          <p className="text-gold font-sans text-sm tracking-widest uppercase mt-4">
+            Disponible en PedidosYa y Rappi
+          </p>
+        )}
         <div className="flex items-center justify-center gap-4 mt-6">
           <div className="h-px w-16 bg-ember" />
           <div className="w-2 h-2 rotate-45 bg-gold" />
@@ -136,7 +142,7 @@ export default function Menu({ operationOverride }) {
               <div key={cat} className="mb-16">
                 <div className="flex items-center gap-4 mb-8">
                   <h3 className="font-serif text-2xl font-bold text-gold">
-                    {categoryLabels[cat] || cat}
+                    {isUruguai && cat === "desserts" ? "Postres" : categoryLabels[cat] || cat}
                   </h3>
                   <div className="flex-1 h-px bg-ember/30" />
                 </div>
