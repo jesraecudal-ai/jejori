@@ -19,6 +19,7 @@ const categoryLabels = {
   chicken: "Frango",
   rice_snacks: "Snacks de Arroz",
   desserts: "Sobremesas",
+  promotions: "Promoções",
 };
 
 export default function Menu({ operationOverride }) {
@@ -87,6 +88,7 @@ export default function Menu({ operationOverride }) {
         setActiveCategory={setActiveCategory}
         activeFilter={activeFilter}
         setActiveFilter={setActiveFilter}
+        operationOverride={op.key}
       />
 
       {/* View Toggle + Count */}
@@ -133,7 +135,11 @@ export default function Menu({ operationOverride }) {
               <div key={cat} className="mb-16">
                 <div className="flex items-center gap-4 mb-8">
                   <h3 className="font-serif text-2xl font-bold text-gold">
-                    {isUruguai && cat === "desserts" ? "Postres" : categoryLabels[cat] || cat}
+                    {isUruguai && cat === "desserts"
+                      ? "Postres"
+                      : isUruguai && cat === "promotions"
+                      ? "Promociones"
+                      : categoryLabels[cat] || cat}
                   </h3>
                   <div className="flex-1 h-px bg-ember/30" />
                 </div>

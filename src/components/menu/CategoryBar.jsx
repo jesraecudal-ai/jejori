@@ -24,21 +24,10 @@ const labelSets = {
   uruguai: {
     categories: [
       { key: "all", label: "Todos" },
-      { key: "dumplings", label: "Dumplings" },
-      { key: "spring_rolls", label: "Spring Rolls" },
-      { key: "buns_rice", label: "Panes y Arroz" },
-      { key: "soups", label: "Sopas" },
-      { key: "noodles", label: "Fideos" },
-      { key: "chicken", label: "Pollo" },
-      { key: "rice_snacks", label: "Snacks de Arroz" },
       { key: "desserts", label: "Postres" },
+      { key: "promotions", label: "Promociones" },
     ],
-    filters: [
-      { key: "popular", label: "Popular" },
-      { key: "spicy", label: "Picante" },
-      { key: "new", label: "Nuevo" },
-      { key: "chefs_pick", label: "Elección del Chef" },
-    ],
+    filters: [],
   },
 };
 
@@ -65,7 +54,7 @@ export default function CategoryBar({ activeCategory, setActiveCategory, activeF
               {cat.label}
             </button>
           ))}
-          <div className="w-px h-8 bg-[#D4AF37]/20 mx-2 self-center shrink-0" />
+          {filters.length > 0 && <div className="w-px h-8 bg-[#D4AF37]/20 mx-2 self-center shrink-0" />}
           {filters.map((f) => (
             <button
               key={f.key}

@@ -52,7 +52,8 @@
         "noodles",
         "chicken",
         "rice_snacks",
-        "desserts"
+        "desserts",
+        "promotions"
       ],
       "description": "Menu category"
     },
