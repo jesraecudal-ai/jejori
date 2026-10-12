@@ -38,7 +38,15 @@ const countryToOperation = (code) => {
 
 // Remember a visitor's branch for 30 days so repeat visits skip detection.
 const OP_COOKIE = "jejori_op";
-const FLASH_MS = 2000;
+const FLASH_MS = 1500;
+
+// Instant, network-free hint: the browser's timezone (e.g. America/Montevideo).
+const timezoneToOperation = () => {
+  const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+  if (tz === "America/Montevideo") return "uruguai";
+  if (tz.startsWith("America/Sao_Paulo") || tz === "America/Bahia" || tz === "America/Fortaleza" || tz === "America/Recife" || tz === "America/Belem" || tz === "America/Manaus" || tz === "America/Cuiaba" || tz === "America/Campo_Grande" || tz === "America/Porto_Velho" || tz === "America/Rio_Branco" || tz === "America/Noronha") return "brasil";
+  return null;
+};
 const readOpCookie = () => {
   const m = document.cookie.match(new RegExp("(?:^|; )" + OP_COOKIE + "=([^;]*)"));
   const v = m ? decodeURIComponent(m[1]) : null;
@@ -92,18 +100,29 @@ export default function OperationSelector() {
       return;
     }
 
-    fetch("https://ipapi.co/json/")
+    // Fixed timer from page load: redirect at FLASH_MS using the IP result if it
+    // arrived in time, otherwise the browser timezone. Unknown -> stay on the cards.
+    let ipOp = null;
+    const controller = new AbortController();
+    const abortTimer = setTimeout(() => controller.abort(), FLASH_MS - 200);
+
+    fetch("https://ipapi.co/json/", { signal: controller.signal })
       .then((res) => res.json())
       .then((data) => {
-        if (cancelled) return;
-        const opKey = countryToOperation(data?.country_code);
-        if (!opKey) return; // other / unknown country -> keep showing the cards
-        timerRef.current = setTimeout(() => go(opKey), FLASH_MS);
+        ipOp = countryToOperation(data?.country_code);
       })
       .catch(() => {});
 
+    timerRef.current = setTimeout(() => {
+      if (cancelled) return;
+      const opKey = ipOp || timezoneToOperation();
+      if (opKey) go(opKey);
+    }, FLASH_MS);
+
     return () => {
       cancelled = true;
+      clearTimeout(abortTimer);
+      controller.abort();
       if (timerRef.current) {
         clearTimeout(timerRef.current);
         timerRef.current = null;
